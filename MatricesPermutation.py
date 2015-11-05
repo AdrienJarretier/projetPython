@@ -1,5 +1,9 @@
 from random import shuffle
 
+# start DEBUG
+# from simplesMatricesFonctions import *
+# end DEBUG
+
 '''
 1)PermutationAleatoire
 2)MatricePermutation
@@ -44,12 +48,17 @@ def MatricePermutation( nUpletPermutation ) :
 	matricePerm = []
 
 	for i in range( n ) :
-		matricePerm.append( [] );
+		matricePerm.append( [0]*n )
 
-	for i in range( n ) :
-		for j in range( n ) :
+	# start DEBUG
+	# afficherMat( matricePerm )
+	# print( "" )
+	# end DEBUG
+
+	for col in range( n ) :
+		lig = nUpletPermutation[ col ] - 1
 		# on ajoute un " 1 " a la ligne specifiee par nUpletPermutation, sinon un " 0 "
-			matricePerm[ i ].append( 1 ) if i == nUpletPermutation[ i ] else matricePerm[ i ].append( 0 )
+		matricePerm[ lig ][ col ] = 1
 
 	return matricePerm
 

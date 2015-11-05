@@ -15,6 +15,7 @@ for i in range( 5 ) :
 
 		nUplet = PermutationAleatoire( i + 1 )
 
+		print("")
 		print( "PermutationAleatoire", i + 1 , " : ", nUplet )
 
 		print( " MatricePermutation( ", nUplet , " ) : " )

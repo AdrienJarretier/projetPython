@@ -44,12 +44,12 @@ def MatricePermutation( nUpletPermutation ) :
 	matricePerm = []
 
 	for i in range( n ) :
-		matricePerm[ i ] = list;
+		matricePerm.append( [] );
 
 	for i in range( n ) :	# pour chaque element du nUpletPermutation
 		for j in range( n ) :
 		# on ajoute un " 1 " a la ligne specifiee par nUpletPermutation, sinon un " 0 "
-			matricePerm[ i ][ j ] = 1 if i == nUpletPermutation[ i ] else 0
+			matricePerm[ i ].append( 1 ) if i == nUpletPermutation[ i ] else matricePerm[ i ].append( 0 )
 
 	return matricePerm
 

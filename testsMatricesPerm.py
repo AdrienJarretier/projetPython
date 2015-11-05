@@ -1,5 +1,14 @@
 from MatricesPermutation import *
 
+def afficherMat( m ) :
+	# m : n'importe quelle matrice representee comme une liste de listes
+
+	# pas de retour
+	for i in range( len( m ) ) :
+		print( m[ i ] )
+
+
+
 for i in range( 5 ) :
 
 	for j in range( 3 ) :
@@ -10,4 +19,4 @@ for i in range( 5 ) :
 
 		print( " MatricePermutation( ", nUplet , " ) : " )
 
-		print( MatricePermutation( nUplet ) )
+		afficherMat( MatricePermutation( nUplet ) )

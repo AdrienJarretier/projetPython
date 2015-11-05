@@ -1,4 +1,4 @@
-from random import randrange
+from random import shuffle
 
 '''
 1)PermutationAleatoire
@@ -22,7 +22,9 @@ def PermutationAleatoire(n) :
 	nUpletPermut = []
 
 	for i in range(n):
-		nUpletPermut.append(randrange(n)+1)
+		nUpletPermut.append(i+1)
+
+	shuffle(nUpletPermut)
 
 	return nUpletPermut
 

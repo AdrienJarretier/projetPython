@@ -17,14 +17,14 @@ Entree :
 Sortie :
 	Une liste qui represente une matrice de permutation aleatoire de taille n*n (n-uplet)
 '''
-def PermutationAleatoire(n) :
+def PermutationAleatoire( n ) :
 
 	nUpletPermut = []
 
-	for i in range(n):
-		nUpletPermut.append(i+1)
+	for i in range( n ):
+		nUpletPermut.append( i + 1 )
 
-	shuffle(nUpletPermut)
+	shuffle( nUpletPermut )
 
 	return nUpletPermut
 
@@ -36,9 +36,22 @@ Entree :
 	nUpletPermutation : liste representant une matrice de permutation
 
 Sortie :
-	Matrice de permutation associee à nUpletPermutation
+	Liste de listes correspondant à la Matrice de permutation associee a nUpletPermutation
 '''
+def MatricePermutation( nUpletPermutation ) :
 
+	n = len( nUpletPermutation )
+	matricePerm = []
+
+	for i in range( n ) :
+		matricePerm[ i ] = list;
+
+	for i in range( n ) :	# pour chaque element du nUpletPermutation
+		for j in range( n ) :
+		# on ajoute un " 1 " a la ligne specifiee par nUpletPermutation, sinon un " 0 "
+			matricePerm[ i ][ j ] = 1 if i == nUpletPermutation[ i ] else 0
+
+	return matricePerm
 
 
 

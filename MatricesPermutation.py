@@ -67,6 +67,15 @@ Entree :
 Sortie :
 	liste representant mPerm (n-uplet associe)
 '''
+def PermutationAssociee( mPerm ) :
+	nUpletPermutation = []
+
+	for j in range( len( mPerm[ 0 ] ) ) :
+		for i in range( len( mPerm ) ) :
+			if mPerm[ i ][ j ] == 1 :
+				nUpletPermutation.append( i + 1 )
+
+	return nUpletPermutation
 
 
 

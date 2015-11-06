@@ -13,6 +13,10 @@ for i in range( 4 ) :
 		print("")
 		print( "PermutationAleatoire(", i + 1 , ") : ", nUplet )
 
-		print( " MatricePermutation( ", nUplet , " ) : " )
+		print( "MatricePermutation( ", nUplet , " ) : " )
 
-		AfficherMat( MatricePermutation( nUplet ) )
+		m = MatricePermutation( nUplet );
+
+		AfficherMat( m )
+
+		print( "PermutationAssociee : ", PermutationAssociee( m ) )

@@ -1,8 +1,5 @@
 from random import shuffle
-
-# start DEBUG
-# from simplesMatricesFonctions import *
-# end DEBUG
+from simplesMatricesFonctions import *
 
 '''
 1)PermutationAleatoire
@@ -45,10 +42,7 @@ Sortie :
 def MatricePermutation( nUpletPermutation ) :
 
 	n = len( nUpletPermutation )
-	matricePerm = []
-
-	for i in range( n ) :
-		matricePerm.append( [0]*n )
+	matricePerm = MatNulle( n, n )
 
 	# start DEBUG
 	# afficherMat( matricePerm )

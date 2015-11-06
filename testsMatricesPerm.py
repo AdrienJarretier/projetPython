@@ -15,4 +15,4 @@ for i in range( 4 ) :
 
 		print( " MatricePermutation( ", nUplet , " ) : " )
 
-		afficherMat( MatricePermutation( nUplet ) )
+		AfficherMat( MatricePermutation( nUplet ) )

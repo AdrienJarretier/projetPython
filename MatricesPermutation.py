@@ -1,8 +1,5 @@
 from random import shuffle
-
-# start DEBUG
-# from simplesMatricesFonctions import *
-# end DEBUG
+from simplesMatricesFonctions import *
 
 '''
 1)PermutationAleatoire
@@ -45,10 +42,7 @@ Sortie :
 def MatricePermutation( nUpletPermutation ) :
 
 	n = len( nUpletPermutation )
-	matricePerm = []
-
-	for i in range( n ) :
-		matricePerm.append( [0]*n )
+	matricePerm = MatNulle( n, n )
 
 	# start DEBUG
 	# afficherMat( matricePerm )
@@ -73,6 +67,15 @@ Entree :
 Sortie :
 	liste representant mPerm (n-uplet associe)
 '''
+def PermutationAssociee( mPerm ) :
+	nUpletPermutation = []
+
+	for j in range( len( mPerm[ 0 ] ) ) :
+		for i in range( len( mPerm ) ) :
+			if mPerm[ i ][ j ] == 1 :
+				nUpletPermutation.append( i + 1 )
+
+	return nUpletPermutation
 
 
 
@@ -80,14 +83,24 @@ Sortie :
 '''
 ProduitPermutG
 
-n-uplet : n-uplet associe a P
+nUplet : n-uplet associe a P
 
-l'ordre des Lignes change, dans chaque ligne i de ( P * M ) on a la ligne de M de la position de i dans n-uplet
+l'ordre des Lignes change,
+dans chaque ligne i de ( P * M ) on a la ligne de M de la position de i dans nUplet
 
 Entree :
 	P : matrice de permutation
-	M : matrice quelconque
+	M : matrice quelconque de du meme nombre de lignes que P
 
 Sortie :
 	matrice produit de P et M ( P * M )
 '''
+def ProduitPermutG( P, M ) :
+	MProduct = []
+
+	nUplet = PermutationAssociee( P )
+
+	for i in range( len( M ) ) :
+		MProduct.append( M[ nUplet.index( i+1 ) ] )
+
+	return MProduct

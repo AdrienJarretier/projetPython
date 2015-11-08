@@ -1,13 +1,6 @@
 from random import shuffle
 from simplesMatricesFonctions import *
 
-'''
-1)PermutationAleatoire
-2)MatricePermutation
-3)PermutationAssociee
-6)ProduitPermutG
-'''
-
 
 '''
 PermutationAleatoire
@@ -28,6 +21,7 @@ def PermutationAleatoire( n ) :
 	shuffle( nUpletPermut )
 
 	return nUpletPermut
+
 
 
 '''
@@ -79,6 +73,53 @@ def PermutationAssociee( mPerm ) :
 
 
 
+## EstPermutation
+##
+## Enree :
+##		M : matrice à tester de taille n*p
+##
+## Sortie :
+##		Vrai si la matrice M est une matrice de permutation valide
+##
+def EstPermutation( M ) :
+    n = len( M )
+    p = len( M[0] )
+    L = []
+    if n != p :
+        return False
+    for i in range( n ) :
+        cptLigne = 0
+        for j in range( n ) :
+            if M[i][j] != 0 and M[i][j] != 1 :
+                return False
+            if M[i][j] == 1 :
+                cptLigne += 1
+                L.append(i)
+                if i in L :
+                    return False
+        if cptLigne != 1 :
+            return False
+
+    return True
+
+
+
+## MatricePermutationInverse
+##
+## L'inverse d'une matrice de permutation est egale a la transposee de la dite matrice
+##
+## Utilisation d'une fonction Transposee()
+##
+## Entree :
+##		mPerm : matrice de permutation
+##
+## Sortie :
+##		matrice inverse de mPerm
+##
+def MatricePermutationInverse( mPerm ):
+    return Transposee( mPerm)
+
+
 
 '''
 ProduitPermutG
@@ -104,3 +145,35 @@ def ProduitPermutG( P, M ) :
 		MProduct.append( M[ nUplet.index( i+1 ) ] )
 
 	return MProduct
+
+
+
+## ProduitPermutD
+##
+## n-uplet : n-uplet associe a P
+##
+## l'ordre des Colonnes change,
+## dans chaque colonne j de ( M * P ) on a la colonne n-uplet[j] de M
+##
+## Entree :
+##		P : matrice de permutation
+##		M : matrice quelconque
+##
+## Sortie :
+##		matrice produit de M et P ( M * P )
+##
+def ProduitPermutD( M, P ) :
+
+    L = PermutationAssociee( P )
+    n = len ( M )
+    p = len ( M[ 0 ] )
+    A = MatNulle( n, p )
+
+    for j in range( p ) :
+
+        for i in range( n ) :
+
+            A[ i ][ j ] = M[ i ][ L[ j ] - 1 ]
+
+    return A
+

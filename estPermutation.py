@@ -25,44 +25,12 @@ def EstPermutation( M ) :
                     return False
         if cptLigne != 1 :
             return False
-        
-            
-    
+
+
+
     return True
 
-M=[
-    [1,0,0,0],
-    [0,0,0,1],
-    [0,1,0,0],
-    [0,0,1,1]
-    ]
 
-print(EstPermutation(M))
-
-
-P=[
-    [1,0,0,0],
-    [0,0,0,0],
-    [0,1,0,0],
-    [0,0,1,0]
-    ]
-print(EstPermutation(P))
-
-
-T=[
-    [1,0,0,0],
-    [0,0,0,1],
-    [0,1,0,0],
-    [0,0,0,1]
-    ]
-print(EstPermutation(T))
-
-R=[
-    [1,0,0,0],
-    [0,0,0,1],
-    [0,1,0,0],
-    ]
-print(EstPermutation(R))
 
 
 # ------------------------------------------------------------------

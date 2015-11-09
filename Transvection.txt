@@ -1,14 +1,56 @@
 1)
 MatriceTransvection
 
+Entree :
+
+Sortie :
+	Liste de listes : Matrice de transvection
+
+
+
 2)
 EstTransvection
+
+Entree :
+	M : Liste de listes : Matrice
+
+Sortie :
+	Booleen : vrai si M est une matrice de transvection
+
+
 
 3)
 MatriceTransvectionInverse
 
+Entree :
+	M : Liste de listes : Matrice de transvection
+
+Sortie :
+	M : Liste de listes : matrice inverse de M
+
+
+
 4)
 ProduitTransvectionG
 
+Entree :
+	T : Liste de listes : Matrice de transvection(n, p)
+	M : Liste de listes : Matrice(p, x)
+
+Sortie :
+	Liste de listes : matrice produit ( T * M )
+
+
+
 5)
 ProduitTransvectionD
+
+Entree :
+	M : Liste de listes : Matrice(n, p)
+	T : Liste de listes : Matrice de transvection(p, x)
+
+Sortie :
+	Liste de listes : matrice produit ( M * T )
+
+
+

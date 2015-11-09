@@ -2,7 +2,7 @@
 ##
 ##On notera une transvection : t(i,a,j)
 ##
-##Matrice identite + Matrice Eij
+##Matrice identite + a * Matrice Eij
 ##
 ##Entree :
 ##    n : taille des matrices

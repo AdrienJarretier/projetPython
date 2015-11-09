@@ -3,7 +3,7 @@ MatriceTransvection
 
 on notera une trasvection : t(i, a, j).
 
-Matrice identite + matrice Eij
+Matrice identite + a * matrice Eij
 
 Entree :
 	i : entier : indice de la ligne a remplacer : 1 <= i <= n

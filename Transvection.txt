@@ -1,0 +1,14 @@
+1)
+MatriceTransvection
+
+2)
+EstTransvection
+
+3)
+MatriceTransvectionInverse
+
+4)
+ProduitTransvectionG
+
+5)
+ProduitTransvectionD

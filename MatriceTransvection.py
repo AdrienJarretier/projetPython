@@ -17,5 +17,15 @@ def MatriceTransvection (i,a,j):
     return Id[i][j]=a
 
 
-    
-    
+
+'''
+ProduitTransvectionD
+
+Entree :
+	M : Liste de listes : Matrice(n, p)
+	T : Liste de listes : Matrice de transvection(p, x)
+
+Sortie :
+	Liste de listes : matrice produit ( M * T )
+'''
+def ProduitTransvectionD( M, T ) :

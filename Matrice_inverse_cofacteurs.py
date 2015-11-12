@@ -83,44 +83,44 @@ def produit (M1,M2):
 
 
 ###########################################################################
-m=[[1.,2.,3.],[2.,4.,16.],[7.,8.,19.]]
-m1=[[2.,0.],[0.,2.]]
-print(m)
-affiche(m)
-print("transposee de m:")
-tm=transpose(m)
-affiche(tm)
+# m=[[1.,2.,3.],[2.,4.,16.],[7.,8.,19.]]
+# m1=[[2.,0.],[0.,2.]]
+# print(m)
+# affiche(m)
+# print("transposee de m:")
+# tm=transpose(m)
+# affiche(tm)
 
-affiche(m)
-print("mineure")
-aux=mineure(m1,1,1)
-affiche(aux)
-print("m1=")
-affiche(m1)
-print("det(m1)=",det(m1))
+# affiche(m)
+# print("mineure")
+# aux=mineure(m1,1,1)
+# affiche(aux)
+# print("m1=")
+# affiche(m1)
+# print("det(m1)=",det(m1))
 
-print("")
-print("m=")
-affiche(m)
-print("det(m)=",det(m))
-print("inverse de m:")
-mi=inverse(m)
-affiche(mi)
-print("produit m*inverse(m):")
-affiche(produit(mi,m))
+# print("")
+# print("m=")
+# affiche(m)
+# print("det(m)=",det(m))
+# print("inverse de m:")
+# mi=inverse(m)
+# affiche(mi)
+# print("produit m*inverse(m):")
+# affiche(produit(mi,m))
 
 
-print("")
-m=[[1.,-1.,2.,4.],[0,3.,2.,1.],[-5.,2.,-3.,-2.],[5,-4,3,-2]]
-print("m=")
-affiche(m)
-print("det(m)=",det(m))
-print("inverse de m:")
-mi=inverse(m)
-affiche(mi)
-print("produit m*inverse(m)==Id ?:")
-affiche(produit(mi,m))
-print("inverse de l'inverse de m==m ?:")
-affiche(inverse(mi))
+# print("")
+# m=[[1.,-1.,2.,4.],[0,3.,2.,1.],[-5.,2.,-3.,-2.],[5,-4,3,-2]]
+# print("m=")
+# affiche(m)
+# print("det(m)=",det(m))
+# print("inverse de m:")
+# mi=inverse(m)
+# affiche(mi)
+# print("produit m*inverse(m)==Id ?:")
+# affiche(produit(mi,m))
+# print("inverse de l'inverse de m==m ?:")
+# affiche(inverse(mi))
 
 

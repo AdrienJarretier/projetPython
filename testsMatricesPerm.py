@@ -2,9 +2,10 @@ from MatricesPermutation import *
 from MatriceTransvection import *
 
 from simplesMatricesFonctions import *
-from EstTransvection import*
+from EstTransvection import *
+from MatriceTransvectionInverse import *
 
-from Matrice_inverse_cofacteurs import *
+from Matrice_inverse_cofacteurs import inverse
 
 
 def testMatriceTransvection( t ) :
@@ -14,8 +15,20 @@ def testMatriceTransvection( t ) :
     print( "coefficient :", t[2], ", ligne :",t[1], ", colonne :" ,t[3] )
     Mt = MatriceTransvection( t[0], t[1], t[2], t[3] )
     AfficherMat( Mt )
+
+
+
+def testMatriceTransvectionInverse(M,i,j,a):
+    print("")
+    print("Matrice :")
+    AfficherMat(M)
     print( "inverse en calculant les cofacteurs ( lourd, ici pour test et comparer ) : " )
-    AfficherMat( inverse( Mt ) )
+    AfficherMat( inverse( M ) )
+    print("")
+    print("Inverse de la matrice de transvection :")
+    print("Ici la diagonale formee de 1 ne doit pas changer alors que le",a," de la colonne ",j," et de la ligne ",i," doit etre remplace par " ,-a)
+    AfficherMat(MatriceTransvectionInverse(M))
+    print(" ")
 
 
 
@@ -50,15 +63,17 @@ def testMatriceTransvection( t ) :
 
 # -------------------------------------- EstPermutation --------------------------------------
 
+
+# print("Fonction EstPermutation :")
+
 # M=[
 #     [1,0,0,0],
 #     [0,0,0,1],
 #     [0,1,0,0],
 #     [0,0,1,1]
 #     ]
-
 # print(EstPermutation(M))
-
+# print(" ")
 
 # P=[
 #     [1,0,0,0],
@@ -67,7 +82,7 @@ def testMatriceTransvection( t ) :
 #     [0,0,1,0]
 #     ]
 # print(EstPermutation(P))
-
+# print(" ")
 
 # T=[
 #     [1,0,0,0],
@@ -76,6 +91,7 @@ def testMatriceTransvection( t ) :
 #     [0,0,0,1]
 #     ]
 # print(EstPermutation(T))
+# print(" ")
 
 # R=[
 #     [1,0,0,0],
@@ -83,8 +99,13 @@ def testMatriceTransvection( t ) :
 #     [0,1,0,0],
 #     ]
 # print(EstPermutation(R))
+# print(" ")
 
 # # -------------------------------------- ProduitPermutD --------------------------------------
+
+# -------------------------------------- ProduitPermutD --------------------------------------
+
+# print("Fonction ProduitPermutD :")
 
 # M=[
 #     [1,2,3,4],
@@ -100,22 +121,30 @@ def testMatriceTransvection( t ) :
 #     [1,0,0,0]
 #     ]
 
-# AfficherMat(ProduitPermutD(M,P))
+# AfficherMat( ProduitPermutD( M, P ) )
 
-t = ( 3, 1, 3, 3 )
-testMatriceTransvection( t )
+# print(" ")
 
-t = ( 5, 3, 12, 5 )
-testMatriceTransvection( t )
+# # -------------------------------------- MatriceTransvection --------------------------------------
 
-t = ( 4, 3, 2, 1 )
-testMatriceTransvection( t )
+# t = ( 3, 1, 3, 3 )
+# testMatriceTransvection( t )
+
+# t = ( 5, 3, 12, 5 )
+# testMatriceTransvection( t )
+
+# t = ( 4, 3, 2, 1 )
+# testMatriceTransvection( t )
 
 # A = [ [ 1, 2, 3 ],
 #       [ 1, 2, 3 ],
 #       [ 1, 2, 3 ],
 #       [ 1, 2, 3 ]
 #     ]
+
+
+
+# # -------------------------------------- ProduitTransvectionD --------------------------------------
 
 
 # AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 2, 1, 1 ) ) )
@@ -132,6 +161,9 @@ testMatriceTransvection( t )
 
 
 # # ---------------------------------- EstTransvection ------------------------
+
+# print("Fonction EstTransvection :")
+
 # M=[
 #     [1,0,0],
 #     [0,1,0],
@@ -154,6 +186,50 @@ testMatriceTransvection( t )
 #     [4,0,0,0,1]
 #     ]
 # print(EstTransvection(T))
+
+# print(" ")
+
+
+
+
+
+# --------------------------- MatriceTransvectionInverse ------------
+print("Matrice de transvection Inverse :")
+
+
+
+
+M=[
+    [1,0,0],
+    [0,1,1],
+    [0,0,1]
+    ]
+testMatriceTransvectionInverse(M,2,3,1)
+
+P=[
+    [1,0,0,0],
+    [0,1,0,0],
+    [3,0,1,0],
+    [0,0,0,1]
+    ]
+testMatriceTransvectionInverse(P,3,1,3)
+
+T=[
+    [1,0,0,0,0,0],
+    [0,1,0,0,0,5],
+    [0,0,1,0,0,0],
+    [0,0,0,1,0,0],
+    [0,0,0,0,1,0],
+    [0,0,0,0,0,1]
+    ]
+testMatriceTransvectionInverse(T,2,6,5)
+
+R=[
+    [1,0],
+    [2,1],
+    ]
+testMatriceTransvectionInverse(R,2,2,2)
+
 
 
 

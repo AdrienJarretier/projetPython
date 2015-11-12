@@ -1,3 +1,7 @@
+from simplesMatricesFonctions import *
+
+
+
 ##MatriceTransvection
 ##
 ##On notera une transvection : t(i,a,j)
@@ -12,9 +16,10 @@
 ##Sortie :
 ##    Liste de listes : Matrice de transvection
 
-def MatriceTransvection (i,a,j):
-    Id=MatId(n)
-    return Id[i][j]=a
+def MatriceTransvection( n, i, a, j ) :
+    Id = MatId( n )
+    Id[ i - 1 ][ j - 1 ] = a
+    return Id
 
 
 
@@ -28,4 +33,4 @@ Entree :
 Sortie :
 	Liste de listes : matrice produit ( M * T )
 '''
-def ProduitTransvectionD( M, T ) :
+# def ProduitTransvectionD( M, T ) :

@@ -9,6 +9,26 @@ def AfficherMat( m ) :
 
 
 '''
+MatId
+
+Entree :
+	n : un entier pour la taille de la matrice n >= 1
+
+Sortie :
+	Liste de listes : matrice identite (n, n)
+
+'''
+def MatId( n ) :
+	mId = MatNulle( n, n )
+
+	for i in range( n ) :
+		mId[ i ][ i ] = 1
+
+	return mId
+
+
+
+'''
 MatNulle
 
 Entree :

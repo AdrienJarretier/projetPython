@@ -94,11 +94,25 @@ def testMatriceTransvection( t ) :
 
 # AfficherMat(ProduitPermutD(M,P))
 
-t = ( 3, 1, 3, 3 )
-testMatriceTransvection( t )
+# t = ( 3, 1, 3, 3 )
+# testMatriceTransvection( t )
 
-t = ( 5, 3, 12, 5 )
-testMatriceTransvection( t )
+# t = ( 5, 3, 12, 5 )
+# testMatriceTransvection( t )
 
-t = ( 4, 3, 2, 1 )
-testMatriceTransvection( t )
+# t = ( 4, 3, 2, 1 )
+# testMatriceTransvection( t )
+
+A = [ [ 1, 2, 3 ],
+      [ 1, 2, 3 ],
+      [ 1, 2, 3 ],
+      [ 1, 2, 3 ]
+    ]
+
+AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 2, 1, 1 ) ) )
+print("")
+AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 1 ) ) )
+print("")
+AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 2 ) ) )
+print("")
+AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 3 ) ) )

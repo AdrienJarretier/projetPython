@@ -1,4 +1,4 @@
-#calcul de l'inverse d'une matrice  
+#calcul de l'inverse d'une matrice
 
 
 def mineure (m,lig,col):
@@ -36,7 +36,7 @@ def transpose(m):
             aux=m[i][j]
             m[i][j]=m[j][i]
             m[j][i]=aux
-    return m        
+    return m
 
 #E: m matrice carrée inversible
 #calcul de l'inverse : transposée de la matrice des cofacteurs
@@ -53,7 +53,7 @@ def inverse(m):
         for col in range(0, len(m[0])):
             ligne.append(signe*det(mineure(m,lig,col))/d)
             signe=(-1)*signe
-        aux.append(ligne)                  
+        aux.append(ligne)
     return transpose(aux)
 
 #...............................................................................
@@ -75,7 +75,7 @@ def produit (M1,M2):
                 for k in range(0,m):
                      som= som + M1[i][k] * M2[k][j]
                 ligne.append(som)
-            R.append(ligne)    
+            R.append(ligne)
         return R
     else:
         print("Produit impossible.")

@@ -26,6 +26,8 @@ def MatriceTransvection( n, i, a, j ) :
 '''
 ProduitTransvectionD
 
+	Cj <- Cj + a * Ci
+
 Entree :
 	M : Liste de listes : Matrice(n, p)
 	T : Liste de listes : Matrice de transvection(p, x)

@@ -43,6 +43,8 @@ Sortie :
 4)
 ProduitTransvectionG
 
+	Li <- Li + a * Lj
+
 Entree :
 	T : Liste de listes : Matrice de transvection(n, p)
 	M : Liste de listes : Matrice(p, x)
@@ -54,6 +56,8 @@ Sortie :
 
 5)
 ProduitTransvectionD
+
+	Cj <- Cj + a * Ci
 
 Entree :
 	M : Liste de listes : Matrice(n, p)

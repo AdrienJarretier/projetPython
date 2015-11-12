@@ -4,13 +4,18 @@ from MatriceTransvection import *
 from simplesMatricesFonctions import *
 from EstTransvection import*
 
+from Matrice_inverse_cofacteurs import *
+
 
 def testMatriceTransvection( t ) :
     print("")
     print( "MatriceTransvection", t, " : " )
     print( "matrice (", t[0], ",", t[0], ")" )
     print( "coefficient :", t[2], ", ligne :",t[1], ", colonne :" ,t[3] )
-    AfficherMat( MatriceTransvection( t[0], t[1], t[2], t[3] ) )
+    Mt = MatriceTransvection( t[0], t[1], t[2], t[3] )
+    AfficherMat( Mt )
+    print( "inverse en calculant les cofacteurs ( lourd, ici pour test et comparer ) : " )
+    AfficherMat( inverse( Mt ) )
 
 
 
@@ -97,61 +102,58 @@ def testMatriceTransvection( t ) :
 
 # AfficherMat(ProduitPermutD(M,P))
 
-# t = ( 3, 1, 3, 3 )
-# testMatriceTransvection( t )
+t = ( 3, 1, 3, 3 )
+testMatriceTransvection( t )
 
-# t = ( 5, 3, 12, 5 )
-# testMatriceTransvection( t )
+t = ( 5, 3, 12, 5 )
+testMatriceTransvection( t )
 
-# t = ( 4, 3, 2, 1 )
-# testMatriceTransvection( t )
+t = ( 4, 3, 2, 1 )
+testMatriceTransvection( t )
 
-A = [ [ 1, 2, 3 ],
-      [ 1, 2, 3 ],
-      [ 1, 2, 3 ],
-      [ 1, 2, 3 ]
-    ]
-
-
-AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 2, 1, 1 ) ) )
-
-print("")
-AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 1 ) ) )
-
-print("")
-AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 2 ) ) )
-
-print("")
-AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 3 ) ) )
+# A = [ [ 1, 2, 3 ],
+#       [ 1, 2, 3 ],
+#       [ 1, 2, 3 ],
+#       [ 1, 2, 3 ]
+#     ]
 
 
+# AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 2, 1, 1 ) ) )
 
-# ---------------------------------- EstTransvection ------------------------
-M=[
-    [1,0,0],
-    [0,1,0],
-    [1,0,1]
-    ]
-print(EstTransvection(M))
+# print("")
+# AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 1 ) ) )
 
-P=[
-    [1,0,0],
-    [1,1,1],
-    [0,0,1]
-    ]
-print(EstTransvection(P))
+# print("")
+# AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 2 ) ) )
 
-T=[
-    [1,0,0,0,0],
-    [2,2,0,0,0],
-    [0,0,1,0,0],
-    [3,2,1,1,0],
-    [4,0,0,0,1]
-    ]
-print(EstTransvection(T))
+# print("")
+# AfficherMat( ProduitTransvectionD( A, MatriceTransvection( 3, 1, 10, 3 ) ) )
 
 
 
+# # ---------------------------------- EstTransvection ------------------------
+# M=[
+#     [1,0,0],
+#     [0,1,0],
+#     [1,0,1]
+#     ]
+# print(EstTransvection(M))
+
+# P=[
+#     [1,0,0],
+#     [1,1,1],
+#     [0,0,1]
+#     ]
+# print(EstTransvection(P))
+
+# T=[
+#     [1,0,0,0,0],
+#     [2,2,0,0,0],
+#     [0,0,1,0,0],
+#     [3,2,1,1,0],
+#     [4,0,0,0,1]
+#     ]
+# print(EstTransvection(T))
 
 
 

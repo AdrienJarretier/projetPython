@@ -10,9 +10,9 @@ from copy import deepcopy
 ##
 ##Entree :
 ##    n : taille des matrices
-##    i : entier : indice de la ligne à remplacer : 1 <= i <=n
-##    a : reel : coefficient de multiplication de la ligne j
-##    j : entier : indice de la ligne de remplacement : 1 <= n ET j!=i
+##    i : entier : indice de la ligne/colonne à remplacer : 1 <= i <=n
+##    a : reel : coefficient de multiplication de la ligne/colonne j
+##    j : entier : indice de la ligne/colonne de remplacement : 1 <= n ET j!=i
 ##Sortie :
 ##    Liste de listes : Matrice de transvection
 ##
@@ -63,4 +63,7 @@ def ProduitTransvectionD( M, T ) :
 			MProduct[ i ][ Ci ] += alpha * M[ i ][ Ci ]
 
 	return MProduct
+
+
+
 

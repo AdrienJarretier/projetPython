@@ -11,7 +11,7 @@ from testProduitTransvectionD import *
 ##
 ## Sortie :
 ##	Liste de listes : matrice produit ( T * M )
-    
+
 def ProduitTransvectionG(T,M):
     P=deepcopy(M)
     i,a,j=TransvectionAssociee(T)

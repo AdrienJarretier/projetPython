@@ -1,5 +1,6 @@
 from simplesMatricesFonctions import *
 from copy import deepcopy
+from MatricesTransvection.EstTransvection import *
 
 
 ##MatriceTransvection
@@ -16,9 +17,13 @@ from copy import deepcopy
 ##    Liste de listes : Matrice de transvection
 ##
 def MatriceTransvection( i, a, j ) :
-    Id = MatId( max( i, j ) )
-    Id[ i - 1 ][ j - 1 ] = a
-    return Id
+
+	if i != j and i > 0 and j > 0 :
+		Id = MatId( max( i, j ) )
+		Id[ i - 1 ][ j - 1 ] = a
+		return Id
+	else :
+		raise Exception("i et j doivent etre differents et superieurs a 0")
 
 
 
@@ -37,29 +42,21 @@ Sortie :
 def ProduitTransvectionD( M, T ) :
 	MProduct = deepcopy( M )
 
+	# print( "DEBUG : ", TransvectionAssociee( T ) )
+
+	Ci, alpha, Cj = TransvectionAssociee( T )
+
 	n = len( M )
-	p = len( M[ 0 ] )
+	p = len( M[ 0 ] ) # nombre de colonnes
 
-	nT = len( T )
-	pT = len( T[ 0 ] )
+	if p < Ci or p < Cj :
 
-	if p != pT :
-
-		raise Exception("le nombre de colonnes de M et de lignes de T est different")
+		raise Exception("le nombre de colonnes de M est inferieur aux colonnes donnees dans la matrice de transvection")
 
 	else :
 
-		Ci = 0
-		alpha = 0
-
-		for i in range( nT ) :
-			for j in range( pT ) :
-				if i != j and T[ i ][ j ] != 0 :
-					Ci = i
-					alpha = T[ i ][ j ]
-
 		for i in range( n ) :
-			MProduct[ i ][ Ci ] += alpha * M[ i ][ Ci ]
+			MProduct[ i ][ Cj - 1 ] += alpha * M[ i ][ Ci - 1 ]
 
 	return MProduct
 
@@ -78,13 +75,24 @@ Sortie :
 '''
 def TransvectionAssociee( T ) :
 
-	AfficherMat( T )
-	print("")
+	# AfficherMat( T )
+	# print("")
 
-	nT = len( T )
-	pT = len( T[ 0 ] )
+	if( EstTransvection( T ) ) :
 
-	for i in range( nT ) :
-		for j in range( pT ) :
-			if i != j and T[ i ][ j ] != 0 :
-				return i+1, T[ i ][ j ], j+1
+		nT = len( T )
+		pT = len( T[ 0 ] )
+
+		for i in range( nT ) :
+			for j in range( pT ) :
+				if i != j and T[ i ][ j ] != 0 :
+
+					# print( "DEBUG : i+1 : ", i + 1 )
+					# print( "DEBUG : j+1 : ", j + 1 )
+					# print( "DEBUG : a : ", T[ i ][ j ] )
+
+					return i+1, T[ i ][ j ], j+1
+
+	else :
+		raise Exception("ce n'est pas une matrice de transvection valide")
+

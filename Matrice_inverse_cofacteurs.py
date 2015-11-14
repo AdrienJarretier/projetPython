@@ -78,8 +78,7 @@ def produit (M1,M2):
             R.append(ligne)
         return R
     else:
-        print("Produit impossible.")
-        return
+        raise Exception("Produit impossible.")
 
 
 ###########################################################################

@@ -9,15 +9,14 @@ from copy import deepcopy
 ##Matrice identite + a * Matrice Eij
 ##
 ##Entree :
-##    n : taille des matrices
-##    i : entier : indice de la ligne/colonne à remplacer : 1 <= i <=n
+##    i : entier : indice de la ligne/colonne à remplacer : 1 <= i
 ##    a : reel : coefficient de multiplication de la ligne/colonne j
-##    j : entier : indice de la ligne/colonne de remplacement : 1 <= n ET j!=i
+##    j : entier : indice de la ligne/colonne de remplacement : 1 <= j ET j != i
 ##Sortie :
 ##    Liste de listes : Matrice de transvection
 ##
-def MatriceTransvection( n, i, a, j ) :
-    Id = MatId( n )
+def MatriceTransvection( i, a, j ) :
+    Id = MatId( max( i, j ) )
     Id[ i - 1 ][ j - 1 ] = a
     return Id
 
@@ -66,4 +65,26 @@ def ProduitTransvectionD( M, T ) :
 
 
 
+'''
+Entree :
+	T : Liste de listes : matrice de transvection
 
+Sortie :
+	composants de la transvection (i, a, j) :
+		i : entier : indice de la ligne/colonne à remplacer : 1 <= i
+		a : reel : coefficient de multiplication de la ligne/colonne j
+		j : entier : indice de la ligne/colonne de remplacement : 1 <= j ET j!=i
+
+'''
+def TransvectionAssociee( T ) :
+
+	AfficherMat( T )
+	print("")
+
+	nT = len( T )
+	pT = len( T[ 0 ] )
+
+	for i in range( nT ) :
+		for j in range( pT ) :
+			if i != j and T[ i ][ j ] != 0 :
+				return i+1, T[ i ][ j ], j+1

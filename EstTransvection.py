@@ -22,7 +22,7 @@ def EstTransvection(M):
             if M[i][j]!=0:
                 cpt+=1
     if cpt!=c+1:
-        return False   
+        return False
     return True
 
 

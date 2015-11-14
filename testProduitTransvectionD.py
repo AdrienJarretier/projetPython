@@ -3,24 +3,6 @@ from simplesMatricesFonctions import *
 
 import Matrice_inverse_cofacteurs
 
-def TransvectionAssociee( T ) :
-
-	nT = len( T )
-	pT = len( T[ 0 ] )
-
-	Ci = 0
-	Cj = 0
-	alpha = 0
-
-	for i in range( nT ) :
-		for j in range( pT ) :
-			if i != j and T[ i ][ j ] != 0 :
-				Ci = i
-				Cj = j
-				alpha = T[ i ][ j ]
-
-	return Ci, alpha, Cj
-
 # def testProduitTransvectionD( M, T ) :
 
 # 	a = 2
@@ -45,9 +27,14 @@ def TransvectionAssociee( T ) :
 # 	[ 1, 2, 3 ]
 # ]
 
-a = 2
 i = 1
-j = 3
-print( TransvectionAssociee( MatriceTransvection(3,i,a,j) ) )
-print( TransvectionAssociee( MatriceTransvection(5,i,a,j) ) )
-print( TransvectionAssociee( MatriceTransvection(4,i,a,j) ) )
+a = 2
+j = 2
+print( TransvectionAssociee( MatriceTransvection(i,a,j) ) )
+print("")
+print( TransvectionAssociee( MatriceTransvection(i,a,j) ) )
+print("")
+i = 4
+a = 2
+j = 2
+print( TransvectionAssociee( MatriceTransvection(i,a,j) ) )

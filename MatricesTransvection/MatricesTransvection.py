@@ -1,6 +1,5 @@
 from simplesMatricesFonctions import *
 from copy import deepcopy
-from MatricesTransvection.EstTransvection import *
 
 
 ##MatriceTransvection
@@ -26,6 +25,71 @@ def MatriceTransvection( i, a, j ) :
 		Id = MatId( max( i, j ) )
 		Id[ i - 1 ][ j - 1 ] = a
 		return Id
+
+
+
+##EstTransvection
+##
+##uniquement des 1 dans la diagnonale
+##et des 0 partout sauf un et un seul element
+##
+##Entree :
+##	M : Liste de listes : Matrice
+##
+##Sortie :
+##	Booleen : vrai si M est une matrice de transvection
+
+def EstTransvection(M):
+    n=len(M)
+    c=0
+    cpt=0
+    for i in range (n):
+        if M[i][i]==1:
+            c+=1
+        else :
+            return False
+        for j in range(n):
+            if M[i][j]!=0:
+                cpt+=1
+    if cpt!=c+1:
+        return False
+    return True
+
+
+
+##MatriceTransvectionInverse
+##
+##Entree :
+##	M : Liste de listes : Matrice de transvection
+##
+##Sortie :
+##	M : Liste de listes : matrice inverse de M
+
+def MatriceTransvectionInverse (M):
+    n=len( M )
+    for i in range( n ) :
+        for j in range( n ) :
+            if i != j and M[i][j] != 0 :
+                M[i][j] = - M[i][j]
+    return M
+
+
+
+## ProduitTransvectionG
+##
+## Entree :
+##	T : Liste de listes : Matrice de transvection(n, p)
+##	M : Liste de listes : Matrice(p, x)
+##
+## Sortie :
+##	Liste de listes : matrice produit ( T * M )
+
+def ProduitTransvectionG(T,M):
+    P=deepcopy(M)
+    i,a,j=TransvectionAssociee(T)
+    for k in range(len(P[0])):
+        P[i][k]+=a*P[j][k]
+    return P
 
 
 

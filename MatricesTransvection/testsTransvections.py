@@ -209,3 +209,6 @@ def testTransvectionAssociee() :
 		print("-"*30, "testTransvectionAssociee", t, "-"*30 )
 		afficherTest( t )
 		print("")
+
+
+

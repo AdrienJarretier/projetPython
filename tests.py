@@ -1,47 +1,37 @@
 from MatricesTransvection.testsTransvections import *
 
-testMatriceTransvection()
-testEstTransvection()
-testMatriceTransvectionInverse()
-testProduitTransvectionG()
-testProduitTransvectionD()
-testTransvectionAssociee()
+tests = [
+			[ "MatriceTransvection" , testMatriceTransvection ],
+			[ "EstTransvection" , testEstTransvection ],
+			[ "MatriceTransvectionInverse" , testMatriceTransvectionInverse ],
+			[ "ProduitTransvectionG" , testProduitTransvectionG ],
+			[ "ProduitTransvectionD" , testProduitTransvectionD ],
+			[ "TransvectionAssociee" , testTransvectionAssociee ]
+		]
 
-# from MatricesPermutation.testsMatricesPerm import *
-# from MatricesTransvection.testEstTransvection import *
-# from MatricesTransvection.testMatriceTransvectionInverse import *
-# from MatricesTransvection.testMatriceTransvection import *
-# from MatricesTransvection.testProduitTransvectionD import *
-# from MatricesTransvection.testTransvectionAssociee import *
+testsTaille = len( tests );
 
-# tests = [
-# 		"testsMatricesPerm",
-# 		"testEstTransvection"
-# 		]
+continuerTests = True;
 
-# testsTaille = len( tests );
+while continuerTests :
 
-# continuerTests = True;
+	print("")
 
-# while continuerTests :
+	for i in range( testsTaille ) :
 
-# 	for i in range( testsTaille ) :
+		print( i + 1 , "-" , tests[ i ][ 0 ] )
 
-# 		print( i + 1 , "-" , tests[ i ] )
+	print("")
 
-# 	testNum = input("choix( 1-" + str(testsTaille) + ", 'q' pour quitter ) : ")
+	testNum = input("choix( 1-" + str(testsTaille) + ", 'q' pour quitter ) : ")
 
-# 	# print( "*",testNum,"*" )
+	testNum = testNum.lower()
 
-# 	testNum = testNum.lower()
+	if testNum == "q" or testNum == "quit" or testNum == "exit" :
 
-# 	if testNum == "q" or testNum == "quit" or testNum == "exit" :
-# 		continuerTests = False
+		continuerTests = False
 
-# 	if testNum == "1" :
-# 		# from MatricesPermutation.testsMatricesPerm import *
-# 		import MatricesPermutation.testsMatricesPerm
-# 	if testNum == "2" :
-# 		# from MatricesTransvection.testEstTransvection import *
-# 		import MatricesTransvection.testEstTransvection
+	elif( testNum.isnumeric() and 0 < int( testNum ) and int( testNum ) <= len( tests ) ) :
+
+		tests[ int( testNum ) - 1 ][ 1 ]()
 

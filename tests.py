@@ -1,3 +1,12 @@
+from MatricesTransvection.testsTransvections import *
+
+testMatriceTransvection()
+testEstTransvection()
+testMatriceTransvectionInverse()
+testProduitTransvectionG()
+testProduitTransvectionD()
+testTransvectionAssociee()
+
 # from MatricesPermutation.testsMatricesPerm import *
 # from MatricesTransvection.testEstTransvection import *
 # from MatricesTransvection.testMatriceTransvectionInverse import *
@@ -5,34 +14,34 @@
 # from MatricesTransvection.testProduitTransvectionD import *
 # from MatricesTransvection.testTransvectionAssociee import *
 
-tests = [
-		"testsMatricesPerm",
-		"testEstTransvection"
-		]
+# tests = [
+# 		"testsMatricesPerm",
+# 		"testEstTransvection"
+# 		]
 
-testsTaille = len( tests );
+# testsTaille = len( tests );
 
-continuerTests = True;
+# continuerTests = True;
 
-while continuerTests :
+# while continuerTests :
 
-	for i in range( testsTaille ) :
+# 	for i in range( testsTaille ) :
 
-		print( i + 1 , "-" , tests[ i ] )
+# 		print( i + 1 , "-" , tests[ i ] )
 
-	testNum = input("choix( 1-" + str(testsTaille) + ", 'q' pour quitter ) : ")
+# 	testNum = input("choix( 1-" + str(testsTaille) + ", 'q' pour quitter ) : ")
 
-	# print( "*",testNum,"*" )
+# 	# print( "*",testNum,"*" )
 
-	testNum = testNum.lower()
+# 	testNum = testNum.lower()
 
-	if testNum == "q" or testNum == "quit" or testNum == "exit" :
-		continuerTests = False
+# 	if testNum == "q" or testNum == "quit" or testNum == "exit" :
+# 		continuerTests = False
 
-	if testNum == "1" :
-		# from MatricesPermutation.testsMatricesPerm import *
-		import MatricesPermutation.testsMatricesPerm
-	if testNum == "2" :
-		# from MatricesTransvection.testEstTransvection import *
-		import MatricesTransvection.testEstTransvection
+# 	if testNum == "1" :
+# 		# from MatricesPermutation.testsMatricesPerm import *
+# 		import MatricesPermutation.testsMatricesPerm
+# 	if testNum == "2" :
+# 		# from MatricesTransvection.testEstTransvection import *
+# 		import MatricesTransvection.testEstTransvection
 

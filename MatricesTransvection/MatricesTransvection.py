@@ -84,11 +84,16 @@ def MatriceTransvectionInverse (M):
 ## Sortie :
 ##	Liste de listes : matrice produit ( T * M )
 
-def ProduitTransvectionG(T,M):
-    P=deepcopy(M)
-    i,a,j=TransvectionAssociee(T)
-    for k in range(len(P[0])):
-        P[i][k]+=a*P[j][k]
+def ProduitTransvectionG( T, M ) :
+
+    P = deepcopy( M )
+
+    i, a, j = TransvectionAssociee( T )
+
+    for k in range( len( P[ 0 ] ) ) :
+
+        P[ i ][ k ] += a * P[ j ][ k ]
+
     return P
 
 

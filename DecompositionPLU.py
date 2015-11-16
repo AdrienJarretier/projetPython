@@ -1,6 +1,7 @@
 from simplesMatricesFonctions import *
 
-from matricesPermutation import *
+from MatricesPermutation.MatricesPermutation import *
+from MatricesTransvection.MatricesTransvection import *
 
 '''
 DecompositionPLU
@@ -32,7 +33,7 @@ def DecompositionPLU( A ) :
 
 	while lig < n and col < n :
 
-		lp # ligne du pivot
+		lp = 0 # ligne du pivot
 
 		pivotTrouve = False
 		# booleen : False si on a trouve aucun pivot dans la colonne
@@ -63,7 +64,7 @@ def DecompositionPLU( A ) :
 
 			for i in range( lig+1, n ) :
 
-				T = MatriceTransvection( i, - float( A[ i ][ col ] ) / pivot , lig )
+				T = MatriceTransvection( i+1, - float( A[ i ][ col ] ) / pivot , lig+1 )
 				A = ProduitTransvectionG( T, A )
 
 				L = ProduitTransvectionG( MatriceTransvectionInverse( T ), L )
@@ -74,3 +75,11 @@ def DecompositionPLU( A ) :
 	U = A
 
 	return P, L, U
+
+A = [
+		[ 4, -9, 2 ],
+		[ 2, -4, 4 ],
+		[ -1, 2, 2 ]
+	]
+
+AfficherMat( DecompositionPLU( A ) )

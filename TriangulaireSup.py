@@ -16,30 +16,3 @@ def TriangulaireSup ( M ):
     return True
 
 
-
-
-
-M=[
-    [1,2,2],
-    [0,1,2],
-    [0,0,1]
-    ]
-print(TriangulaireSup(M))
-
-print(" ")
-
-P=[
-    [1,2,3,4],
-    [0,0,2,5],
-    [4,5,6,9],
-    [5,8,6,8]
-    ]
-print(TriangulaireSup(P))
-print(" ")
-
-T=[
-    [1,2,3,4],
-    [0,1,2,5],
-    [0,0,1,9],
-    ]
-print(TriangulaireSup(T))

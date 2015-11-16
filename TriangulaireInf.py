@@ -14,24 +14,4 @@ def TriangulaireInf ( M ):
                 return False
     return True
 
-M=[
-    [1,0,0],
-    [1,1,0],
-    [1,1,1]
-    ]
 
-print(TriangulaireInf(M))
-
-P=[
-    [1,0,4],
-    [1,1,0],
-    [1,1,1]
-    ]
-print(TriangulaireInf(P))
-
-T=[
-    [1,0,0],
-    [1,1,1],
-    [1,1,1]
-    ]
-print(TriangulaireInf(T))

@@ -40,20 +40,20 @@ def MatriceTransvection( i, a, j ) :
 ##	Booleen : vrai si M est une matrice de transvection
 
 def EstTransvection(M):
-    n=len(M)
-    c=0
-    cpt=0
-    for i in range (n):
-        if M[i][i]==1:
-            c+=1
-        else :
-            return False
-        for j in range(n):
-            if M[i][j]!=0:
-                cpt+=1
-    if cpt!=c+1:
-        return False
-    return True
+	n=len(M)
+	c=0
+	cpt=0
+	for i in range (n):
+		if M[i][i]==1:
+			c+=1
+		else :
+			return False
+		for j in range(n):
+			if M[i][j]!=0:
+				cpt+=1
+	if cpt!=c+1:
+		return False
+	return True
 
 
 
@@ -66,16 +66,21 @@ def EstTransvection(M):
 ##	M : Liste de listes : matrice inverse de M
 
 def MatriceTransvectionInverse (M):
-    n=len( M )
-    for i in range( n ) :
-        for j in range( n ) :
-            if i != j and M[i][j] != 0 :
-                M[i][j] = - M[i][j]
-    return M
+
+	inverse = deepcopy( M )
+
+	n=len( inverse )
+	for i in range( n ) :
+		for j in range( n ) :
+			if i != j and inverse[i][j] != 0 :
+				inverse[i][j] = - inverse[i][j]
+	return inverse
 
 
 
 ## ProduitTransvectionG
+##
+## Li <- Li + a * Lj
 ##
 ## Entree :
 ##	T : Liste de listes : Matrice de transvection(n, p)
@@ -86,15 +91,22 @@ def MatriceTransvectionInverse (M):
 
 def ProduitTransvectionG( T, M ) :
 
-    P = deepcopy( M )
+	P = deepcopy( M )
 
-    i, a, j = TransvectionAssociee( T )
+	i, a, j = TransvectionAssociee( T )
 
-    for k in range( len( P[ 0 ] ) ) :
+	# print("DEBUG : a : ", a)
 
-        P[ i ][ k ] += a * P[ j ][ k ]
+	for k in range( len( P[ 0 ] ) ) :
 
-    return P
+		# print("DEBUG : ", P)
+		# print("DEBUG : i : ", i)
+		# print("DEBUG : j : ", j)
+		# print("DEBUG : k : ", k)
+
+		P[ i - 1 ][ k ] += a * P[ j - 1 ][ k ]
+
+	return P
 
 
 
@@ -149,6 +161,9 @@ def TransvectionAssociee( T ) :
 	# AfficherMat( T )
 	# print("")
 
+	# print( "DEBUG TransvectionAssociee T : " )
+	# AfficherMat( T )
+
 	if( EstTransvection( T ) ) :
 
 		nT = len( T )
@@ -160,7 +175,7 @@ def TransvectionAssociee( T ) :
 
 					# print( "DEBUG : i+1 : ", i + 1 )
 					# print( "DEBUG : j+1 : ", j + 1 )
-					# print( "DEBUG : a : ", T[ i ][ j ] )
+					# print( "DEBUG TransvectionAssociee : a : ", T[ i ][ j ] )
 
 					return i+1, T[ i ][ j ], j+1
 

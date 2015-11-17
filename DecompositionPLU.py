@@ -3,6 +3,8 @@ from simplesMatricesFonctions import *
 from MatricesPermutation.MatricesPermutation import *
 from MatricesTransvection.MatricesTransvection import *
 
+from Matrice_inverse_cofacteurs import produit
+
 '''
 DecompositionPLU
 
@@ -58,7 +60,7 @@ def DecompositionPLU( A ) :
 
 			A = ProduitPermutG( Paux, A )
 			P = ProduitPermutG( Paux, P )
-			L = ProduitPermutG( MatricePermutationInverse( Paux ), L )
+			# L = ProduitPermutG( MatricePermutationInverse( Paux ), L )
 
 			pivot = A[ lig ][ col ]
 
@@ -67,7 +69,16 @@ def DecompositionPLU( A ) :
 				T = MatriceTransvection( i+1, - float( A[ i ][ col ] ) / pivot , lig+1 )
 				A = ProduitTransvectionG( T, A )
 
+				# print("DEBUG : T-1 : ")
+				# AfficherMat( MatriceTransvectionInverse( T ) )
+				# print("DEBUG : L : ")
+				# AfficherMat(L)
+				# print("DEBUG : produit : ")
 				L = ProduitTransvectionG( MatriceTransvectionInverse( T ), L )
+				# AfficherMat(L)
+				# print("")
+				# print("-"*50)
+				# print("")
 
 			lig += 1
 			col += 1
@@ -82,4 +93,13 @@ A = [
 		[ -1, 2, 2 ]
 	]
 
-AfficherMat( DecompositionPLU( A ) )
+PLU = DecompositionPLU( A )
+
+for mat in PLU :
+	print("")
+	AfficherMat( mat )
+
+print("")
+AfficherMat( produit( produit( PLU[0], PLU[1] ), PLU[2] ) )
+
+print("")

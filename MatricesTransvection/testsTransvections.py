@@ -28,6 +28,13 @@ def testEstTransvection() :
 	M=[
 	    [1,0,0],
 	    [0,1,0],
+	    [0,0,1]
+	    ]
+	print(EstTransvection(M))
+
+	M=[
+	    [1,0,0],
+	    [0,1,0],
 	    [1,0,1]
 	    ]
 	print(EstTransvection(M))
@@ -190,7 +197,11 @@ def testTransvectionAssociee() :
 			print( "Mt : " )
 			AfficherMat( Mt )
 
-			print( "Attendu :", (i, a, j) )
+			if a != 0 :
+				print( "Attendu :", (i, a, j) )
+			else :
+				print( "Attendu : (1, 0, 1) car alpha == 0, la transvection n'aura aucun effet" )
+
 			print( "resultat de la fonction TransvectionAssociee a Mt :" )
 			print( TransvectionAssociee( Mt ) )
 			print("")

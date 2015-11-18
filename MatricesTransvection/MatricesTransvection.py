@@ -19,8 +19,8 @@ def MatriceTransvection( i, a, j ) :
 
 	if i == j or i < 1 or j < 1 :
 		raise Exception( "'i' et 'j' doivent etre differents et superieurs a 0" )
-	elif a == 0 :
-		raise Exception( "'a' doit etre different de 0" )
+	# elif a == 0 :
+	# 	raise Exception( "'a' doit etre different de 0" )
 	else :
 		Id = MatId( max( i, j ) )
 		Id[ i - 1 ][ j - 1 ] = a
@@ -40,19 +40,26 @@ def MatriceTransvection( i, a, j ) :
 ##	Booleen : vrai si M est une matrice de transvection
 
 def EstTransvection(M):
-	n=len(M)
-	c=0
-	cpt=0
-	for i in range (n):
-		if M[i][i]==1:
-			c+=1
+	n = len( M )
+	c = 0
+	cpt = 0
+
+	for i in range ( n ) :
+
+		if M[ i ][ i ] == 1 :
+			c += 1
+
 		else :
 			return False
-		for j in range(n):
-			if M[i][j]!=0:
-				cpt+=1
-	if cpt!=c+1:
+
+		for j in range( n ) :
+
+			if M[ i ][ j ] != 0 :
+				cpt += 1
+
+	if cpt > c + 1 :
 		return False
+
 	return True
 
 
@@ -178,6 +185,8 @@ def TransvectionAssociee( T ) :
 					# print( "DEBUG TransvectionAssociee : a : ", T[ i ][ j ] )
 
 					return i+1, T[ i ][ j ], j+1
+
+		return 1, 0, 1
 
 	else :
 		raise Exception("ce n'est pas une matrice de transvection valide")

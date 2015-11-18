@@ -59,7 +59,10 @@ def DecompositionPLU( A ) :
 			Paux = MatricePermutation( permut )
 
 			A = ProduitPermutG( Paux, A )
-			P = ProduitPermutG( Paux, P )
+			# P = ProduitPermutG( Paux, P )
+			P = ProduitPermutD( Paux, P )
+			# P = ProduitPermutD( P, Paux )
+			# P = ProduitPermutG( P, Paux )
 			L = ProduitPermutG( MatricePermutationInverse( Paux ), L )
 
 			pivot = A[ lig ][ col ]

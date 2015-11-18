@@ -95,7 +95,7 @@ def ProduitTransvectionG( T, M ) :
 
 	i, a, j = TransvectionAssociee( T )
 
-	# print("DEBUG : a : ", a)
+	print("DEBUG : i, a, j : ", i, a, j)
 
 	for k in range( len( P[ 0 ] ) ) :
 

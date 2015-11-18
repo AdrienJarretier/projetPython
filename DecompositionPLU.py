@@ -69,16 +69,16 @@ def DecompositionPLU( A ) :
 				T = MatriceTransvection( i+1, - float( A[ i ][ col ] ) / pivot , lig+1 )
 				A = ProduitTransvectionG( T, A )
 
-				print("DEBUG : T-1 : ")
-				AfficherMat( MatriceTransvectionInverse( T ) )
-				print("DEBUG : L : ")
-				AfficherMat(L)
-				print("DEBUG : produit : ")
-				L = ProduitTransvectionG( MatriceTransvectionInverse( T ), L )
-				AfficherMat(L)
-				print("")
-				print("-"*50)
-				print("")
+				# print("DEBUG : T-1 : ")
+				# AfficherMat( MatriceTransvectionInverse( T ) )
+				# print("DEBUG : L : ")
+				# AfficherMat(L)
+				# print("DEBUG : produit : ")
+				L = ProduitTransvectionD( L, MatriceTransvectionInverse( T ) )
+				# AfficherMat(L)
+				# print("")
+				# print("-"*50)
+				# print("")
 
 			lig += 1
 			col += 1
@@ -87,19 +87,43 @@ def DecompositionPLU( A ) :
 
 	return P, L, U
 
-A = [
-		[ 4, -9, 2 ],
-		[ 2, -4, 4 ],
-		[ -1, 2, 2 ]
-	]
 
-PLU = DecompositionPLU( A )
 
-for mat in PLU :
-	print("")
-	AfficherMat( mat )
+# A = [
+# 		[ 4, -9, 2 ],
+# 		[ 2, -4, 4 ],
+# 		[ -1, 2, 2 ]
+# 	]
 
-print("")
-AfficherMat( produit( produit( PLU[0], PLU[1] ), PLU[2] ) )
+# PLU = DecompositionPLU( A )
 
-print("")
+# for mat in PLU :
+# 	print("")
+# 	AfficherMat( mat )
+
+# print("")
+# AfficherMat( produit( produit( PLU[0], PLU[1] ), PLU[2] ) )
+
+# print("")
+
+
+
+
+
+# A = [
+# 		[ 2, 4, 2, 0 ],
+# 		[ 1, 2, 1, 0 ],
+# 		[ 1, 2, 1, 3 ],
+# 		[ 1, 2, 2, 1 ]
+# 	]
+
+# PLU = DecompositionPLU( A )
+
+# for mat in PLU :
+# 	print("")
+# 	AfficherMat( mat )
+
+# print("")
+# AfficherMat( produit( produit( PLU[0], PLU[1] ), PLU[2] ) )
+
+# print("")

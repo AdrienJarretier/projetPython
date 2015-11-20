@@ -1,0 +1,296 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Matr",
+				"matrices"
+			],
+			[
+				"pivo",
+				"pivotTrouve"
+			],
+			[
+				"Mat",
+				"MatId"
+			],
+			[
+				"Tri",
+				"TriangulaireInf"
+			],
+			[
+				"Tr",
+				"TriangulaireSup"
+			],
+			[
+				"test",
+				"testNum"
+			],
+			[
+				"tes",
+				"testNum"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"pid",
+				"pidFils"
+			],
+			[
+				"proc",
+				"procName"
+			],
+			[
+				"n",
+				"nUpletPermut"
+			],
+			[
+				"lis",
+				"listeNupletPermutation"
+			],
+			[
+				"transve",
+				"transvecter"
+			],
+			[
+				"min",
+				"Mineure"
+			]
+		]
+	},
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 372.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesPermutation/MatricesPermutation.pyc",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/MatricesTransvection.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testsTransvections.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/simplesMatricesFonctions.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/tests.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/Matrice_inverse_cofacteurs.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/DecompositionPLU.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesPermutation/MatricesPermutation.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesPermutation/MatricesPermutation.txt",
+		"/home/freeze/cours/methodesMatricielles/projetPython/TriangulaireInf.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/TriangulaireSup.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testTransvectionAssociee.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testEstTransvection.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testMatriceTransvectionInverse.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testProduitTransvectionD.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testProduitTransvectionG.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testMatriceTransvection.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython.sublime-project",
+		"/home/freeze/cours/methodesMatricielles/projetPython/projet2015.pdf",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/Transvection.txt",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/ex7.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp5/ex4.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/ProduitTransvectionG.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/MatriceTransvectionInverse.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/EstTransvection.py",
+		"/home/freeze/Videos/Conjuring The (2013).KingStoner.en.srt",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/MatriceTransvection.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesPermutation/testsMatricesPerm.py",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5bis/exo1.py",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/ex8.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/testsMatricesPerm.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/Transvection.txt",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesPermutation.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp3/tp3.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatriceTransvection.py",
+		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesPermutation.txt",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp7/JarretierAdrienTP7.sagews",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp7/ex3.sagews",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp7/ex2.sagews",
+		"/home/freeze/cours/methodesMatricielles/projetPython/estPermutation.py",
+		"/home/freeze/.config/sublime-text-2/Packages/Default/font.py",
+		"/home/freeze/.config/sublime-text-2/Packages/Default/font.pyc",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/ex6.py",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/ex5.py",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/ex3_2.py",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/ex1.py",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/tp5.py",
+		"/home/freeze/Dropbox/cours/systeme/tp/tp5/ex2.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp2/ex2.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp2/ex1.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/projet/MatricesPermutation.txt",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp5/ex3.py",
+		"/home/freeze/Downloads/openExemple/data/pgsql/init_parametrage.sql",
+		"/home/freeze/Downloads/openExemple/dyn/database.inc.php",
+		"/home/freeze/Downloads/openExemple/data/pgsql/install.sql",
+		"/home/freeze/Downloads/openExemple/README.txt",
+		"/home/freeze/Downloads/openExemple/data/pgsql/init_data.sql",
+		"/home/freeze/Downloads/openExemple/dyn/locales.inc.php",
+		"/home/freeze/Downloads/openExemple/HISTORY.txt",
+		"/home/freeze/Downloads/openmairie_exemple_4.4.0/scr/index.php",
+		"/home/freeze/Downloads/openmairie_exemple_4.4.0/INSTALL.txt",
+		"/home/freeze/Downloads/openmairie_exemple_4.4.0/php/README.txt",
+		"/home/freeze/Downloads/openmairie_exemple_4.4.0/README.txt",
+		"/home/freeze/Downloads/openmairie_exemple_4.4.0/php/index.php",
+		"/run/media/freeze/C646A2EC46A2DC85/programmation/web/smiteStats/smiteStats/head.php",
+		"/home/freeze/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/freeze/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/run/media/freeze/C646A2EC46A2DC85/programmation/web/smiteStats/smiteStats/header.php",
+		"/home/freeze/Dropbox/installedPackagesArch",
+		"/home/freeze/pingusScript",
+		"/home/freeze/games.txt",
+		"/home/freeze/Dropbox/Programmation/c++/MathGame/ProjetMath.cbp",
+		"/home/freeze/robert",
+		"/home/freeze/Dropbox/fifuf.txt",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp6/ex5.sage",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp6/ex1.sage",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp6/ex2.sage",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp6/ex5.sage.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp6/ex1.sage.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp6/ex1.sagews",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp5/ex2.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp5/ex1.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp2/ex3.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp2/ex4.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp2/ex5.py",
+		"/home/freeze/Dropbox/cours/structuresDeDonnees/tp1/TestListe.java",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp1/ex3.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp1/ex4.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp1/ex5.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp1/ex6.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp1/ex7.py",
+		"/home/freeze/Dropbox/cours/methodesMatricielles/tp/tp1/ex8.py",
+		"/home/freeze/cours/methodesMatricielles/tp/ex3.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/freeze/Downloads/openExemple",
+			"/home/freeze/Downloads/openExemple/dyn/*",
+			"/home/freeze/Downloads/openExemple/dyn"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"è",
+			"é",
+			"à",
+			"osfork",
+			"gf",
+			"$_GET['obj']",
+			"obj",
+			"om_colle",
+			"<form>",
+			"insert into",
+			"insert into openexemple.om_utilisateur",
+			"insert into om_utilisateur",
+			"insert int om_utilisateur"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"e",
+			"a"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true
+}

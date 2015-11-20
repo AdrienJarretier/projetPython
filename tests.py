@@ -124,11 +124,11 @@ while continuerTests :
 
 	for i in range( testsTaille ) :
 
-		print( i + 1 , "-" , tests[ i ][ 0 ] )
+		print i + 1 , "-" , tests[ i ][ 0 ]
 
 	print("")
 
-	testNum = input("choix( 1-" + str(testsTaille) + ", 'q' pour quitter ) : ")
+	testNum = raw_input("choix( 1-" + str(testsTaille) + ", 'q' pour quitter ) : ")
 
 	testNum = testNum.lower()
 
@@ -136,7 +136,7 @@ while continuerTests :
 
 		continuerTests = False
 
-	elif( testNum.isnumeric() and 0 < int( testNum ) and int( testNum ) <= len( tests ) ) :
+	elif( unicode(testNum).isnumeric() and 0 < int( testNum ) and int( testNum ) <= len( tests ) ) :
 
 		print("")
 		tests[ int( testNum ) - 1 ][ 1 ]()

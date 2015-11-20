@@ -9,7 +9,7 @@ from copy import deepcopy
 ##Matrice identite + a * Matrice Eij
 ##
 ##Entree :
-##    i : entier : indice de la ligne/colonne à remplacer : 1 <= i
+##    i : entier : indice de la ligne/colonne a remplacer : 1 <= i
 ##    a : reel : coefficient de multiplication de la ligne/colonne j : a != 0
 ##    j : entier : indice de la ligne/colonne de remplacement : 1 <= j ET j != i
 ##Sortie :
@@ -158,7 +158,7 @@ Entree :
 
 Sortie :
 	composants de la transvection (i, a, j) :
-		i : entier : indice de la ligne/colonne à remplacer : 1 <= i
+		i : entier : indice de la ligne/colonne a remplacer : 1 <= i
 		a : reel : coefficient de multiplication de la ligne/colonne j
 		j : entier : indice de la ligne/colonne de remplacement : 1 <= j ET j!=i
 

@@ -11,7 +11,7 @@ DecompositionPLU
 Decomposition en 3 matrices P, L et U
 de la matrice carree donnee en entree
 
-A peut se décomposer
+A peut se decomposer
 sous la forme du produit de 3 matrices
 sous la forme : A = PLU
 

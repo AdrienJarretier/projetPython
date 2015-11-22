@@ -4,13 +4,13 @@
 def mineure (m,lig,col):
     #suppression de la ligne d'indice lig
     aux=m[0:lig]+m[lig+1:]
-    #suppression de l'élément d'indice col
+    #suppression de l'element d'indice col
     aux2=[]
     for ligne in aux:
         aux2.append(ligne[0:col]+ligne[col+1:])
     return aux2
 
-#developpement du determinant systématique selon la première colonne
+#developpement du determinant systematique selon la premiere colonne
 def det(m):
     if len(m)==1:
         return m[0][0]
@@ -28,7 +28,7 @@ def affiche(m):
     for lig in m:
         print(lig)
 
-#transposée d'une matrice carrée
+#transposee d'une matrice carree
 def transpose(m):
     n=len(m)
     for i in range(0,n):
@@ -38,8 +38,8 @@ def transpose(m):
             m[j][i]=aux
     return m
 
-#E: m matrice carrée inversible
-#calcul de l'inverse : transposée de la matrice des cofacteurs
+#E: m matrice carree inversible
+#calcul de l'inverse : transposee de la matrice des cofacteurs
 #S: renvoie la matrice inverse
 def inverse(m):
     d=det(m)

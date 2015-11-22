@@ -36,7 +36,7 @@ Entree :
 	p : un entier
 
 Sortie :
-	Matrice nulle de taille (n, p) représentée par une liste de listes
+	Matrice nulle de taille (n, p) representee par une liste de listes
 '''
 def MatNulle(n, p) :
 	m = []

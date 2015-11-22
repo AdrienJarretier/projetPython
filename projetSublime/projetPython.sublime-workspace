@@ -89,6 +89,12 @@
 	},
 	"file_history":
 	[
+		"/home/freeze/cours/projetPython/Matrice_inverse_cofacteurs.py",
+		"/home/freeze/cours/projetPython/MatricesPermutation/MatricesPermutation.py",
+		"/home/freeze/cours/projetPython/MatricesPermutation/MatricesPermutation.txt",
+		"/home/freeze/cours/projetPython/MatricesTransvection/MatricesTransvection.py",
+		"/home/freeze/cours/projetPython/DecompositionPLU.py",
+		"/home/freeze/cours/projetPython/simplesMatricesFonctions.py",
 		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesPermutation/MatricesPermutation.pyc",
 		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/MatricesTransvection.py",
 		"/home/freeze/cours/methodesMatricielles/projetPython/MatricesTransvection/testsTransvections.py",
@@ -189,9 +195,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"<project>",
 			"/home/freeze/Downloads/openExemple",
 			"/home/freeze/Downloads/openExemple/dyn/*",
 			"/home/freeze/Downloads/openExemple/dyn"
@@ -202,6 +209,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ö",
+			"ô",
+			"ï",
+			"î",
+			"ä",
+			"â",
+			"ë",
+			"ê",
+			"ù",
+			"è",
+			"é",
+			"à",
 			"è",
 			"é",
 			"à",
@@ -222,6 +241,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"e",
+			"a",
 			"e",
 			"a"
 		],

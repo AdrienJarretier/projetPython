@@ -16,7 +16,7 @@ Entree :
 	nUpletPermutation : liste representant une matrice de permutation
 
 Sortie :
-	Matrice de permutation associee à nUpletPermutation
+	Matrice de permutation associee a nUpletPermutation
 
 
 
@@ -35,7 +35,7 @@ Sortie :
 EstPermutation
 
 Entree :
-	m : matrice à tester
+	m : matrice a tester
 
 Sortie :
 	Vrai si la matrice m est une matrice de permutation valide

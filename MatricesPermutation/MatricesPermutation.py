@@ -31,7 +31,7 @@ Entree :
 	nUpletPermutation : liste representant une matrice de permutation
 
 Sortie :
-	Liste de listes correspondant a la Matrice de permutation associee a nUpletPermutation
+	Liste de listes correspondant à la Matrice de permutation associee a nUpletPermutation
 '''
 def MatricePermutation( nUpletPermutation ) :
 
@@ -76,7 +76,7 @@ def PermutationAssociee( mPerm ) :
 ## EstPermutation
 ##
 ## Enree :
-##		M : matrice a tester de taille n*p
+##		M : matrice à tester de taille n*p
 ##
 ## Sortie :
 ##		Vrai si la matrice M est une matrice de permutation valide

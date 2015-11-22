@@ -1,4 +1,4 @@
-from MatricesTransvection import *
+from MatricesTransvection.MatricesTransvection import *
 from Matrice_inverse_cofacteurs import inverse, produit
 
 def testMatriceTransvection() :

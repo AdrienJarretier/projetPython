@@ -28,7 +28,7 @@ def MatriceTransvection( i, a, j, n=0 ) :
 	else :
 		if n == 0 :
 			Id = MatId( max( i, j ) )
-		else if n > max( i, j ) :
+		elif n > max( i, j ) :
 			Id = MatId( n )
 		else :
 			raise Exception( "n est inferieur a i et a j ! " )

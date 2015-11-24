@@ -1,4 +1,4 @@
-from MatricesPermutation.MatricesPermutation import *
+from MatricesPermutation import *
 
 from simplesMatricesFonctions import *
 

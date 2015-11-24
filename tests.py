@@ -1,4 +1,4 @@
-from MatricesTransvection.testsTransvections import *
+from testsTransvections import *
 from TriangulaireSup import *
 from TriangulaireInf import *
 from DecompositionPLU import *

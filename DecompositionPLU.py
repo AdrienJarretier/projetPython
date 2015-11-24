@@ -1,7 +1,7 @@
 from simplesMatricesFonctions import *
 
-from MatricesPermutation.MatricesPermutation import *
-from MatricesTransvection.MatricesTransvection import *
+from MatricesPermutation import *
+from MatricesTransvection import *
 
 from Matrice_inverse_cofacteurs import produit
 

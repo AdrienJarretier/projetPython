@@ -1,7 +1,7 @@
-from testsTransvections import *
+from TestsTransvections import *
 from TriangulaireSup import *
 from TriangulaireInf import *
-from DecompositionPLU import *
+from Decomposition import *
 
 def testDecompositionPLU() :
 	mTests = [

@@ -12,17 +12,25 @@ from copy import deepcopy
 ##    i : entier : indice de la ligne/colonne a remplacer : 1 <= i
 ##    a : reel : coefficient de multiplication de la ligne/colonne j : a != 0
 ##    j : entier : indice de la ligne/colonne de remplacement : 1 <= j ET j != i
+##	  n : entier : dimensions de la matrice (n,n) : Optionnel,
+##		si non fourni n prendra max( i, j )
 ##Sortie :
 ##    Liste de listes : Matrice de transvection
 ##
-def MatriceTransvection( i, a, j ) :
+def MatriceTransvection( i, a, j, n=0 ) :
+
+	# print("DEBUG : n :", n)
 
 	if i == j or i < 1 or j < 1 :
 		raise Exception( "'i' et 'j' doivent etre differents et superieurs a 0" )
 	# elif a == 0 :
 	# 	raise Exception( "'a' doit etre different de 0" )
 	else :
-		Id = MatId( max( i, j ) )
+		if n == 0 :
+			Id = MatId( max( i, j ) )
+		else :
+			Id = MatId( n )
+
 		Id[ i - 1 ][ j - 1 ] = a
 		return Id
 

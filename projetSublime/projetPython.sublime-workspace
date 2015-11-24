@@ -89,6 +89,8 @@
 	},
 	"file_history":
 	[
+		"/home/freeze/cours/projetPython/TestsTransvections.py",
+		"/home/freeze/cours/projetPython/tests.py",
 		"/home/freeze/cours/projetPython/Matrice_inverse_cofacteurs.py",
 		"/home/freeze/cours/projetPython/MatricesPermutation/MatricesPermutation.py",
 		"/home/freeze/cours/projetPython/MatricesPermutation/MatricesPermutation.txt",
@@ -206,7 +208,7 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
 			"ö",
@@ -249,7 +251,7 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"incremental_find":

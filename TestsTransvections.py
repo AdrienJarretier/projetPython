@@ -131,23 +131,23 @@ def testProduitTransvectionG() :
 def testProduitTransvectionD() :
 	def afficherTest( M, i, a, j ) :
 
-		T = MatriceTransvection( i, a, j )
+		T = MatriceTransvection( i, a, j, len( M[0] ) )
 
 		print("matrice de transvection : ")
 		AfficherMat( T )
 		print("")
 		print("matrice sur laquelle appliquer la trasnvection :")
-		AfficherMat( A )
+		AfficherMat( M )
 		print("")
 		print("resultat attendu : ")
-		print("C"+str(j),"<= C"+str(j),"+",a,"* C"+str(i), "=", A[0][j-1]+a*A[0][i-1] )
+		print("C"+str(j),"<= C"+str(j),"+",a,"* C"+str(i), "=", M[0][j-1]+a*M[0][i-1] )
 		print("")
 		print("resultat de la fonction ProduitTransvectionD :")
-		AfficherMat( ProduitTransvectionD( A, T ) )
+		AfficherMat( ProduitTransvectionD( M, T ) )
 		print("")
 		print("produit en utilisant la methode classique et lourde pour comparer : ")
 		try :
-			AfficherMat( produit( A, T ) )
+			AfficherMat( produit( M, T ) )
 		except Exception as inst:
 			print("")
 			print( inst )

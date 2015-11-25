@@ -1,3 +1,7 @@
+from simplesMatricesFonctions import *
+from Permutations import *
+from Transvections import *
+
 def DecompositionPLU ( A ):
     n = len( A )
     lig = 0 # Indice de la ligne courante
@@ -19,24 +23,31 @@ def DecompositionPLU ( A ):
 
         else :
             permut = list( range( 1, n+1 ) )
-	    permut[ lig ] = lp + 1
-	    permut[ i ] = lig + 1
-	    Paux = MatricePermutation ( permut )
-	    
-            A = ProduitPermutG( Paux, A )
+            permut[ lig ] = lp + 1
+            permut[ lp ] = lig + 1
+            Paux = MatricePermutation ( permut )
+
+            A = ProduitPermutG ( Paux, A )
             P = ProduitPermutG ( Paux, P )
             L = ProduitPermutD ( L, MatricePermutationInverse( P ) )
 
             pivot = A[lig][col]
 
-            for j in range ( lig+1, n-1 ):
-                x = -( A[i][col]/pivot )
-                A = ProduitPermutG ( T ( i,x,lig ) , A )
-                L = ProduitPermutD (L , MatricePermutationInverse( T ( i,x,lig ) ) )
-                
+            for j in range ( lig+1, n ):
+                x = -( A[j][col]/pivot )
+
+                T = MatriceTransvection( j+1, x , lig+1 )
+                # print("DEBUG T :")
+                # AfficherMat(T)
+
+                A = ProduitTransvectionG( T, A )
+                L = ProduitTransvectionD( L , MatriceTransvectionInverse( T ) )
+
             lig+=1
             col+=1
+
         L = ProduitPermutG ( MatricePermutationInverse ( P ) , L )
         U = A
-        return( P, L, U)
-            
+
+        return ( P, L, U )
+

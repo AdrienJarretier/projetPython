@@ -140,6 +140,7 @@ def ProduitPermutG( P, M ) :
 	MProduct = []
 
 	nUplet = PermutationAssociee( P )
+	# print( " **DEBUG** nUplet : ", nUplet, " **DEBUG** " )
 
 	for i in range( len( M ) ) :
 		MProduct.append( M[ nUplet.index( i+1 ) ] )

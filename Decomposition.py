@@ -3,8 +3,6 @@ from simplesMatricesFonctions import *
 from Permutations import *
 from Transvections import *
 
-from Matrice_inverse_cofacteurs import produit
-
 '''
 DecompositionPLU
 

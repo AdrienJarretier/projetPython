@@ -1,5 +1,7 @@
 from simplesMatricesFonctions import *
-from Decomposition import *
+from Decomposition2 import *
+
+from Matrice_inverse_cofacteurs import produit
 
 def testDecompositionPLU() :
 	mTests = [

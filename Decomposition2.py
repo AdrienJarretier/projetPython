@@ -2,12 +2,13 @@ from simplesMatricesFonctions import *
 from Permutations import *
 from Transvections import *
 
+
 def DecompositionPLU ( A ):
     n = len( A )
     lig = 0 # Indice de la ligne courante
     col = 0 # Indice de la colonne courante
-    P = MatId( n )
-    L = MatId( n )
+    P = MatId( n ) # Initialisation de P
+    L = MatId( n ) # Initilaisation de L
 
     while lig < n and col < n :
         Trouve = False
@@ -22,6 +23,7 @@ def DecompositionPLU ( A ):
             col += 1
 
         else :
+            # Creation de la matrice Paux
             permut = list( range( 1, n+1 ) )
             permut[ lig ] = lp + 1
             permut[ lp ] = lig + 1
@@ -37,8 +39,9 @@ def DecompositionPLU ( A ):
                 x = -( A[j][col]/pivot )
 
                 T = MatriceTransvection( j+1, x , lig+1 )
-                # print("DEBUG T :")
-                # AfficherMat(T)
+##                print("DEBUG T :")
+##                AfficherMat(T)
+                
 
                 A = ProduitTransvectionG( T, A )
                 L = ProduitTransvectionD( L , MatriceTransvectionInverse( T ) )
@@ -46,8 +49,9 @@ def DecompositionPLU ( A ):
             lig+=1
             col+=1
 
-        L = ProduitPermutG ( MatricePermutationInverse ( P ) , L )
+        L = ProduitPermutG ( MatricePermutationInverse ( P ), L )
         U = A
 
-        return ( P, L, U )
+    return( P, L, U )
+
 

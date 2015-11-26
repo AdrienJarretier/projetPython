@@ -44,14 +44,40 @@ def DecompositionPLU ( A ):
                 
 
                 A = ProduitTransvectionG( T, A )
-                L = ProduitTransvectionD( L , MatriceTransvectionInverse( T ) )
+                #M=MatriceTransvection(j+1, -x, lig+1)
+                #M=MatriceTransvectionInverse(T)
+                L = ProduitTransvectionD( L , MatriceTransvectionInverse(T) )
+                
 
             lig+=1
             col+=1
 
         L = ProduitPermutG ( MatricePermutationInverse ( P ), L )
         U = A
+        
+    
+    print("P :")
+    AfficherMat(P)
+    print(" ")
+    print("L :")
+    AfficherMat(L)
+    print(" ")
+    print("U :")
+    AfficherMat(U)
+    return (P, L, U)
 
-    return( P, L, U )
-
-
+##A=[
+##    [4, -9, 2],
+##    [2, -4, 4],
+##    [-1, 2, 2]
+##    ]
+##
+##print(DecompositionPLU(A))
+##
+##B=[
+##    [2,4,2,0],
+##    [1,2,1,0],
+##    [1,2,1,3],
+##    [1,2,2,1]
+##    ]
+##print(DecompositionPLU(B))

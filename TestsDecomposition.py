@@ -1,5 +1,5 @@
 from simplesMatricesFonctions import *
-from Decomposition2 import *
+from Decomposition import *
 
 from Matrice_inverse_cofacteurs import produit
 

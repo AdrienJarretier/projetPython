@@ -22,109 +22,58 @@ Sortie :
 	U : liste de listes : Matrice triangulaire superieure
 
 '''
-def DecompositionPLU( A ) :
-	lig = 0 # indice de la ligne courante
-	col = 0 # indice de la colonne courante
+def DecompositionPLU ( A ):
+    n = len( A )
 
-	n = len( A )
+    lig = 0 # Indice de la ligne courante
+    col = 0 # Indice de la colonne courante
 
-	P = MatId( n )
-	L = MatId( n )
+    P = MatId( n ) # Initialisation de P
+    L = MatId( n ) # Initilaisation de L
 
-	while lig < n and col < n :
+    while lig < n and col < n :
+        Trouve = False
+        # booleen : False si on a trouve aucun pivot dans la colonne
 
-		lp = 0 # ligne du pivot
+        lp = 0 # ligne du pivot
 
-		pivotTrouve = False
-		# booleen : False si on a trouve aucun pivot dans la colonne
+        for i in range ( lig , n ):
+            if A[i][col] != 0 :
+                lp = i
+                Trouve = True
+                break
 
-		for i in range( lig, n ) :
+        if not Trouve :
+            col += 1
 
-			if A[ i ][ col ] != 0 :
-				lp = i
-				pivotTrouve = True
-				break
+        else :
+            # Creation de la matrice Paux
+            permut = list( range( 1, n+1 ) )
+            permut[ lig ] = lp + 1
+            permut[ lp ] = lig + 1
+            Paux = MatricePermutation ( permut )
 
+            A = ProduitPermutG ( Paux, A )
+            P = ProduitPermutG ( Paux, P )
+            L = ProduitPermutD ( L, MatricePermutationInverse( P ) )
 
-		if not pivotTrouve :
-			col += 1
+            pivot = A[lig][col]
 
-		else :
-			permut = list( range( 1, n+1 ) )
-			permut[ lig ] = i + 1
-			permut[ i ] = lig + 1
+            for j in range ( lig+1, n ):
+                x = -( A[j][col]/pivot )
 
-			Paux = MatricePermutation( permut )
-
-			A = ProduitPermutG( Paux, A )
-			# P = ProduitPermutG( Paux, P )
-			P = ProduitPermutD( Paux, P )
-			# P = ProduitPermutD( P, Paux )
-			# P = ProduitPermutG( P, Paux )
-			L = ProduitPermutG( MatricePermutationInverse( Paux ), L )
-
-			pivot = A[ lig ][ col ]
-
-			for i in range( lig+1, n ) :
-
-				T = MatriceTransvection( i+1, - float( A[ i ][ col ] ) / pivot , lig+1 )
-				A = ProduitTransvectionG( T, A )
-
-				# print("DEBUG : T-1 : ")
-				# AfficherMat( MatriceTransvectionInverse( T ) )
-				# print("DEBUG : L : ")
-				# AfficherMat(L)
-				# print("DEBUG : produit : ")
-				L = ProduitTransvectionD( L, MatriceTransvectionInverse( T ) )
-				# AfficherMat(L)
-				# print("")
-				# print("-"*50)
-				# print("")
-
-			lig += 1
-			col += 1
-
-	U = A
-
-	return P, L, U
+                T = MatriceTransvection( j+1, x , lig+1 )
 
 
+                A = ProduitTransvectionG( T, A )
 
-# A = [
-# 		[ 4, -9, 2 ],
-# 		[ 2, -4, 4 ],
-# 		[ -1, 2, 2 ]
-# 	]
-
-# PLU = DecompositionPLU( A )
-
-# for mat in PLU :
-# 	print("")
-# 	AfficherMat( mat )
-
-# print("")
-# AfficherMat( produit( produit( PLU[0], PLU[1] ), PLU[2] ) )
-
-# print("")
+                L = ProduitTransvectionD( L , MatriceTransvectionInverse(T) )
 
 
+            lig+=1
+            col+=1
 
+        L = ProduitPermutG ( MatricePermutationInverse ( P ), L )
+        U = A
 
-
-# A = [
-# 		[ 2, 4, 2, 0 ],
-# 		[ 1, 2, 1, 0 ],
-# 		[ 1, 2, 1, 3 ],
-# 		[ 1, 2, 2, 1 ]
-# 	]
-
-# PLU = DecompositionPLU( A )
-
-# for mat in PLU :
-# 	print("")
-# 	AfficherMat( mat )
-
-# print("")
-# AfficherMat( produit( produit( PLU[0], PLU[1] ), PLU[2] ) )
-
-# print("")
+    return (P, L, U)

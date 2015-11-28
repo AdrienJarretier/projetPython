@@ -55,7 +55,7 @@ def DecompositionPLU ( A ):
 
             A = ProduitPermutG ( Paux, A )
             P = ProduitPermutG ( Paux, P )
-            L = ProduitPermutD ( L, MatricePermutationInverse( P ) )
+            L = ProduitPermutD ( L, MatricePermutationInverse( Paux ) )
 
             pivot = A[lig][col]
 
@@ -64,6 +64,8 @@ def DecompositionPLU ( A ):
 
                 T = MatriceTransvection( j+1, x , lig+1 )
 
+                # print("**DEBUG**  T : ")
+                # AfficherMat( T )
 
                 A = ProduitTransvectionG( T, A )
 
@@ -73,7 +75,7 @@ def DecompositionPLU ( A ):
             lig+=1
             col+=1
 
-        L = ProduitPermutG ( MatricePermutationInverse ( P ), L )
-        U = A
+    L = ProduitPermutG ( MatricePermutationInverse ( P ), L )
+    U = A
 
     return (P, L, U)

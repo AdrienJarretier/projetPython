@@ -2,6 +2,7 @@ from TestsTransvections import *
 from TriangulaireSup import *
 from TriangulaireInf import *
 from TestsDecomposition import *
+from TestsApplications import *
 
 def testTriangulaireSup() :
 	M=[
@@ -73,7 +74,8 @@ tests = [
 			[ "TransvectionAssociee" , testTransvectionAssociee ],
 			[ "TriangulaireSup" , testTriangulaireSup ],
 			[ "TriangulaireInf" , testTriangulaireInf ],
-			[ "DecompositionPLU" , testDecompositionPLU ]
+			[ "DecompositionPLU" , testDecompositionPLU ],
+			[ "DeterminantPLU" , testDeterminantPLU ]
 		]
 
 testsTaille = len( tests );

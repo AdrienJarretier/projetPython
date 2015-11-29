@@ -99,7 +99,7 @@ def ResolutionTriSupCramer( A,B ) :
         for j in range ( i+1,n ) :
             S += A[ i ][ j ] * X[ j ]
         X[ i ] = ( B[ i ] - S ) / A[ i ][ i ]
-    return X 
+    return X
 
 
 ##ResolutionTriInfCramer
@@ -142,17 +142,17 @@ def ResolutionTriInfCramer( A,B ):
 ##    Enfin on applique la fonction ResolutionTriSupCramer a U et Y (Y ayant ete
 ##    trouve juste avant).
 ##     Ainsi on obtiendra les solutions de l'equation : A * X = B.
-    
-def ResolutionCramer( A,B ): 
+
+def ResolutionCramer( A,B ):
     P, L, U = DecompositionPLU( A )
-    
+
     Y = ResolutionTriInfCramer( L, ProduitPermutG ( MatricePermutationInverse( P ),B ) )
 
     return ResolutionTriSupCramer( U,Y )
 
 A=[
-    [ 5, 8, 9, 10, 8 ], 
-    [ 4, 5, 6, 4, 6 ], 
+    [ 5, 8, 9, 10, 8 ],
+    [ 4, 5, 6, 4, 6 ],
     [ 7, 8, 10, 5, 9 ],
     [ 11, 8, 4, 9, 2 ],
     [ 9, 4, 12, 3, 1 ]

@@ -58,9 +58,9 @@ def testEstTransvection() :
                 print("La Matrice M est elle une matrice de transvection ?")
                 print( EstTransvection( M[ i ] ) )
                 print("-"*50)
-        
+
         print(" ")
-        
+
 
 
 
@@ -235,4 +235,3 @@ if __name__=="__main__":
         testProduitTransvectionG()
         testProduitTransvectionD()
         testTransvectionAssociee()
-        

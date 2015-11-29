@@ -74,7 +74,7 @@ def produit (M1,M2):
                 som=0
                 for k in range(0,m):
                      som= som + M1[i][k] * M2[k][j]
-                ligne.append(som)
+                ligne.append( round(som, 4) )
             R.append(ligne)
         return R
     else:

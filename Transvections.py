@@ -1,7 +1,6 @@
 from simplesMatricesFonctions import *
 from copy import deepcopy
 
-
 ##MatriceTransvection
 ##
 ##On notera une transvection : t(i,a,j)
@@ -12,7 +11,7 @@ from copy import deepcopy
 ##    i : entier : indice de la ligne a remplacer si utilisee dans un produit a gauche: 1 <= i
 ##                              colonne de remplacement si utilisee dans un produit a droite
 ##
-##    a : reel : coefficient de multiplication de la ligne/colonne de remplacement 
+##    a : reel : coefficient de multiplication de la ligne/colonne de remplacement
 ##
 ##    j : entier : indice de la ligne de remplacement si utilisee dans un produit a gauche: 1 <= j ET j != i
 ##                              colonne a remplacer si utilisee dans un produit a droite
@@ -32,8 +31,8 @@ from copy import deepcopy
 ##
 ##        Donc on regarde si le parametre n a ete specifie, si non on prend le maximum entre i et j comme
 ##        taille de matrice.
-##        Puis on ajoute a a la ligne i-1 et a la colonne j-1. 
-        
+##        Puis on ajoute a a la ligne i-1 et a la colonne j-1.
+
 def MatriceTransvection( i, a, j, n=0 ) :
 
         # print("DEBUG : n :", n)
@@ -70,8 +69,8 @@ def MatriceTransvection( i, a, j, n=0 ) :
 ##        Puis on regarde dans la matrice tous les coefficients differents de 0 et on incremente un
 ##        compteur cpt lorsque c'est le cas.
 ##        A la fin si cpt est strictement plus grand que c+1 c'est alors qu'il y a plus d'un coefficient en dehors de la
-##        diagonale qui est different de 0. 
-        
+##        diagonale qui est different de 0.
+
 
 def EstTransvection(M):
         n = len( M )
@@ -108,7 +107,7 @@ def EstTransvection(M):
 ##Fonctionnement :
 ##        On regarde que i et j soient different (pour pas etre sur la diagonale contenant des 1)
 ##        puis on regarde aussi que le coefficient a soit different de 0.
-##        Si ces deux conditions sont remplies alors on multiplie le coefficient a par -1. 
+##        Si ces deux conditions sont remplies alors on multiplie le coefficient a par -1.
 
 def MatriceTransvectionInverse (M):
 
@@ -137,29 +136,31 @@ def MatriceTransvectionInverse (M):
 ##Fonctionnement :
 ##        On recupere les coefficients i, j et a de la matrice de transvection T
 ##        avec la fonction TransvectionAssociee.
-##        Puis on remplace la ligne i par la ligne i + la ligne j multipliee par a. 
+##        Puis on remplace la ligne i par la ligne i + la ligne j multipliee par a.
 
-        
+
 def ProduitTransvectionG( T, M ) :
 
-        P = deepcopy( M )
+    P = deepcopy( M )
 
-        i, a, j = TransvectionAssociee( T )
+    i, a, j = TransvectionAssociee( T )
 
-        # print("DEBUG : i, a, j : ", i, a, j)
-        n = len( M ) # Nombre de ligne
-        p = len( M[ 0 ] ) 
+    # print("DEBUG : i, a, j : ", i, a, j)
+    n = len( M ) # Nombre de ligne
+    p = len( M[ 0 ] )
 
-        for k in range( len( P[ 0 ] ) ) :
+    for k in range( len( P[ 0 ] ) ) :
 
-                # print("DEBUG : ", P)
-                # print("DEBUG : i : ", i)
-                # print("DEBUG : j : ", j)
-                # print("DEBUG : k : ", k)
+        # print("DEBUG : ", P)
+        # print("DEBUG : i : ", i)
+        # print("DEBUG : j : ", j)
+        # print("DEBUG : k : ", k)
 
-                P[ i - 1 ][ k ] += a * P[ j - 1 ][ k ]
+        P[ i - 1 ][ k ] += a * P[ j - 1 ][ k ]
 
-        return P
+        P[ i - 1 ][ k ] = round( P[ i - 1 ][ k ] , 4 )
+
+    return P
 
 
 
@@ -179,30 +180,30 @@ Fonctionnement :
         On recupere les coefficients Ci, Cj et alpha de la matrice de transvection T
         avec la fonction TransvectionAssociee.
         On verifie que Ci et Cj sont des indices de colonnes valides, c'est a dire qu'ils sont
-        inferieurs aux nombres de colonnes de la matrice M. 
-        Puis on remplace la colonne j par la colonne j + la colonne i multipliee par alpha. 
+        inferieurs aux nombres de colonnes de la matrice M.
+        Puis on remplace la colonne j par la colonne j + la colonne i multipliee par alpha.
 
 '''
 def ProduitTransvectionD( M, T ) :
-        MProduct = deepcopy( M )
+    MProduct = deepcopy( M )
 
-        # print( "DEBUG : ", TransvectionAssociee( T ) )
+    Ci, alpha, Cj = TransvectionAssociee( T )
 
-        Ci, alpha, Cj = TransvectionAssociee( T )
+    n = len( M )
+    p = len( M[ 0 ] ) # nombre de colonnes
 
-        n = len( M )
-        p = len( M[ 0 ] ) # nombre de colonnes
+    if p < Ci or p < Cj :
 
-        if p < Ci or p < Cj :
+        raise Exception("le nombre de colonnes de M est inferieur aux colonnes donnees dans la matrice de transvection")
 
-                raise Exception("le nombre de colonnes de M est inferieur aux colonnes donnees dans la matrice de transvection")
+    else :
 
-        else :
+        for i in range( n ) :
 
-                for i in range( n ) :
-                        MProduct[ i ][ Cj - 1 ] += alpha * MProduct[ i ][ Ci - 1 ]
+            MProduct[ i ][ Cj - 1 ] += alpha * MProduct[ i ][ Ci - 1 ]
+            MProduct[ i ][ Cj - 1 ]  = round( MProduct[ i ][ Cj - 1 ]  , 4 )
 
-        return MProduct
+	return MProduct
 
 
 
@@ -215,7 +216,7 @@ Sortie :
                 i : entier : indice de la ligne a remplacer si utilisee dans un produit a gauche: 1 <= i
                                           colonne de remplacement si utilisee dans un produit a droite
 
-                a : reel : coefficient de multiplication de la ligne/colonne de remplacement : si T = Id alors (i,a,j)=(1,0,1) 
+                a : reel : coefficient de multiplication de la ligne/colonne de remplacement : si T = Id alors (i,a,j)=(1,0,1)
 
                 j : entier : indice de la ligne de remplacement si utilisee dans un produit a gauche: 1 <= j ET j != i
                                           colonne a remplacer si utilisee dans un produit a droite
@@ -227,7 +228,7 @@ Fonctionnement :
         Si aucun coefficient en dehors de la diagonale est different de 0 alors on retourne (1, 0, 1) car aucunes transvections
         n'est effectuee.
         Si la matrice T n'est pas une matrice de transvection on leve une exception.
-        
+
 '''
 def TransvectionAssociee( T ) :
 

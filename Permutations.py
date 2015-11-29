@@ -6,15 +6,17 @@ from simplesMatricesFonctions import *
 PermutationAleatoire
 
 Entree :
-	n : un entier
+	n : un entier ; n > 0
 
 Sortie :
 	Une liste qui represente une matrice de permutation aleatoire de taille n*n (n-uplet)
 
 Fonctionnement :
+
         On fait une boucle for pour ajouter les chiffres de 0 a n dans la liste nUpletPermut
         Puis on melange les chiffres contenus dans la liste nUpletPermut (grace à shuffle)
-        afin d'obtenir une position aleatoire des chiffres dans la liste. 
+        afin d'obtenir une position aleatoire des chiffres dans la liste.
+
 '''
 def PermutationAleatoire( n ) :
 
@@ -47,14 +49,10 @@ def MatricePermutation( nUpletPermutation ) :
 	n = len( nUpletPermutation )
 	matricePerm = MatNulle( n, n )
 
-	# start DEBUG
-	# afficherMat( matricePerm )
-	# print( "" )
-	# end DEBUG
-
 	for col in range( n ) :
 		lig = nUpletPermutation[ col ] - 1
-		# on ajoute un " 1 " a la ligne specifiee par nUpletPermutation, sinon un " 0 "
+
+		# on ajoute un " 1 " a la ligne specifiee par nUpletPermutation
 		matricePerm[ lig ][ col ] = 1
 
 	return matricePerm
@@ -74,7 +72,7 @@ Fonctionnement :
         On cree une liste vide qui va contenir les positions de 1 contenus dans la matrice
         c'est a dire on va ajouter les numeros des lignes en fonction des colonnes ;
         nUpletPermutation[ 2 ] va contenir le numero de ligne ou se trouve le 1 dans la
-        colonne 2. 
+        colonne 2.
 '''
 def PermutationAssociee( mPerm ) :
 	nUpletPermutation = []
@@ -99,7 +97,7 @@ def PermutationAssociee( mPerm ) :
 ## Fonctionnement :
 ##        On cherche :
 ##            - Si la matrice est carree
-##            - S'il n'y a pas de valeurs differente de 0 et de 1 
+##            - S'il n'y a pas de valeurs differente de 0 et de 1
 ##            - Si dans chaque ligne on a qu'un seul 1
 ##            - Si dans chaque colonne on a qu'un seul 1
 ##        Si toutes ces conditions sont respectees alors on a une matrice de permutation
@@ -164,7 +162,7 @@ Fonctionnement :
         On cree une nouvelle matrice dans laquelle on ajoute les lignes en fonction
         de leur place dans le nUplet associe a P ;
         Si le nUplet est (4,2,1,3) on va placer la ligne 4 de la matrice M a la ligne
-        1 de la nouvelle matrice creee. 
+        1 de la nouvelle matrice creee.
 '''
 def ProduitPermutG( P, M ) :
 	MProduct = []
@@ -197,7 +195,7 @@ def ProduitPermutG( P, M ) :
 ##       On cree une nouvelle matrice dans laquelle on ajoute les colonnes en fonction
 ##        de leur place dans le nUplet associe a P ;
 ##        Si le nUplet est (4,2,1,3) on va placer la colonne 4 de la matrice M a la colonne
-##        1 de la nouvelle matrice creee. 
+##        1 de la nouvelle matrice creee.
 def ProduitPermutD( M, P ) :
 
     L = PermutationAssociee( P )

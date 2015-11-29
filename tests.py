@@ -1,6 +1,6 @@
 from TestsPermutations import *
-
 from TestsTransvections import *
+
 from TriangulaireSup import *
 from TriangulaireInf import *
 from TestsDecomposition import *
@@ -82,6 +82,7 @@ tests = [
 			[ "ProduitTransvectionG" , testProduitTransvectionG ],
 			[ "ProduitTransvectionD" , testProduitTransvectionD ],
 			[ "TransvectionAssociee" , testTransvectionAssociee ],
+
 			[ "TriangulaireSup" , testTriangulaireSup ],
 			[ "TriangulaireInf" , testTriangulaireInf ],
 			[ "DecompositionPLU" , testDecompositionPLU ],
@@ -99,7 +100,9 @@ while continuerTests :
 	for i in range( testsTaille ) :
 
 		print( i + 1 , "-" , tests[ i ][ 0 ] )
-		if i==6 :
+		if i == 6 :
+			print("")
+		if i == 6 + 6 :
 			print("")
 
 	print("")

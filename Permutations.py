@@ -76,28 +76,35 @@ def PermutationAssociee( mPerm ) :
 ## EstPermutation
 ##
 ## Enree :
-##		M : matrice a tester de taille n*p
+##	M : matrice a tester de taille n*p (ici il faut que la matrice soit de taille n*n)
 ##
 ## Sortie :
-##		Vrai si la matrice M est une matrice de permutation valide
+##	Vrai si la matrice M est une matrice de permutation valide
 ##
+## Fonctionnement :
+##        On cherche :
+##            - Si la matrice est carree
+##            - S'il n'y a pas de valeurs differente de 0 et de 1 
+##            - Si dans chaque ligne on a qu'un seul 1
+##            - Si dans chaque colonne on a qu'un seul 1
+##        Si toutes ces conditions sont respectees alors on a une matrice de permutation
+
 def EstPermutation( M ) :
     n = len( M )
-    p = len( M[0] )
-    L = []
+    p = len( M[ 0 ] )
     if n != p :
         return False
     for i in range( n ) :
         cptLigne = 0
+        cptColonne = 0
         for j in range( n ) :
             if M[i][j] != 0 and M[i][j] != 1 :
                 return False
             if M[i][j] == 1 :
                 cptLigne += 1
-                L.append(i)
-                if i in L :
-                    return False
-        if cptLigne != 1 :
+            if M[j][i] == 1 :
+                cptColonne +=1
+        if cptLigne != 1 or cptColonne != 1 :
             return False
 
     return True
@@ -111,10 +118,10 @@ def EstPermutation( M ) :
 ## Utilisation d'une fonction Transposee()
 ##
 ## Entree :
-##		mPerm : matrice de permutation
+##	mPerm : matrice de permutation
 ##
 ## Sortie :
-##		matrice inverse de mPerm
+##	matrice inverse de mPerm
 ##
 def MatricePermutationInverse( mPerm ):
     return Transposee( mPerm)
@@ -157,11 +164,11 @@ def ProduitPermutG( P, M ) :
 ## dans chaque colonne j de ( M * P ) on a la colonne n-uplet[j] de M
 ##
 ## Entree :
-##		P : matrice de permutation
-##		M : matrice quelconque
+##	P : matrice de permutation
+##	M : matrice quelconque
 ##
 ## Sortie :
-##		matrice produit de M et P ( M * P )
+##	matrice produit de M et P ( M * P )
 ##
 def ProduitPermutD( M, P ) :
 

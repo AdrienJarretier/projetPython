@@ -1,7 +1,6 @@
 from simplesMatricesFonctions import *
 from copy import deepcopy
 
-
 ##MatriceTransvection
 ##
 ##On notera une transvection : t(i,a,j)
@@ -123,6 +122,8 @@ def ProduitTransvectionG( T, M ) :
 
 		P[ i - 1 ][ k ] += a * P[ j - 1 ][ k ]
 
+		P[ i - 1 ][ k ] = round( P[ i - 1 ][ k ] , 4 )
+
 	return P
 
 
@@ -157,6 +158,8 @@ def ProduitTransvectionD( M, T ) :
 
 		for i in range( n ) :
 			MProduct[ i ][ Cj - 1 ] += alpha * M[ i ][ Ci - 1 ]
+
+			MProduct[ i ][ Cj - 1 ]  = round( MProduct[ i ][ Cj - 1 ]  , 4 )
 
 	return MProduct
 

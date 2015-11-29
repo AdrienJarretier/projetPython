@@ -62,3 +62,45 @@ def DeterminantPLU( M ) :
 
 
 
+##ResolutionTriSupCramer
+##
+##Entree :
+##    A : une matrice triangulaire superieure de taille n*n
+##    B : second membre de taille n
+##Sortie :
+##    Les solutions du système de l'equation : A * X = B
+
+def ResolutionTriSupCramer( A,B ) :
+    n = len(A)
+    X = list ( range ( n ) )
+    X[ n-1 ] = B[ n-1 ] / A[ n-1 ][ n-1 ]
+    for i in reversed (range ( n-1 )):
+        S = 0
+        for j in range ( i+1,n ) :
+            S += A[ i ][ j ] * X[ j ]
+        X[ i ] = ( B[ i ] - S ) / A[ i ][ i ]
+    return X 
+
+
+##ResolutionTriInfCramer
+##
+##Entree :
+##    A : une matrice triangulaire inferieure de taille n*n
+##    B : second membre de taille n
+##Sortie :
+##    Les solutions du système de l'equation : A * X = B
+
+def ResolutionTriInfCramer( A,B ):
+    n = len(A)
+    X = list ( range ( n ) )
+    X[ 0 ] = B[ 0 ] / A[ 0 ][ 0 ]
+    for i in range ( 1,n ):
+        S=0
+        for j in range ( i ):
+            S+=A[ i ][ j ] * X [ j ]
+        X[ i ] = ( B[ i ] - S ) / A[ i ][ i ]
+    return X
+
+
+    
+

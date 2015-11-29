@@ -143,7 +143,7 @@ def testProduitTransvectionG() :
     print("")
     print("*"*32, "*****************************", "*"*32)
     print("*"*32, "Tests de ProduitTransvectionG", "*"*32)
-
+    print(" ---------------- ProduitTransvectionG -------------------")
     M=[
         [1,1,1],
         [2,2,2],
@@ -155,8 +155,84 @@ def testProduitTransvectionG() :
     i = 1
     j = 3
     t = MatriceTransvection( i, a, j )
-
+    print("La matrice de depart est :")
+    AfficherMat(M)
+    print(" ")
+    print("a=",a,"i=",i,"j=",j)
+    print(" ")
+    print("La ligne ",i," va être remplacee par la ligne ",i,"+ la ligne ",j,"*",a)
+    print("On obtient la matrice :")
     AfficherMat( ProduitTransvectionG( t, M ) )
+    print("-"*50)
+
+    print(" ---------------- ProduitTransvectionG -------------------")
+    M=[
+        [4,5,6],
+        [8,9,10],
+        [2,1,5],
+        [1,1,1]
+        ]
+
+    a = 2
+    i = 3
+    j = 4
+    t = MatriceTransvection( i, a, j )
+    print("La matrice de depart est :")
+    AfficherMat(M)
+    print(" ")
+    print("a=",a,"i=",i,"j=",j)
+    print(" ")
+    print("La ligne ",i," va être remplacee par la ligne ",i,"+ la ligne ",j,"*",a)
+    print("On obtient la matrice :")
+    AfficherMat( ProduitTransvectionG( t, M ) )
+    print("-"*50)
+
+    
+    print(" ---------------- ProduitTransvectionG -------------------")
+    M=[
+        [1, 10, 20, 5],
+        [2, 2, 5, 1],
+        [10, 4, 5, 7],
+        [2, 2, 2, 2]
+        ]
+
+    a = 1
+    i = 1
+    j = 4
+    t = MatriceTransvection( i, a, j )
+    print("La matrice de depart est :")
+    AfficherMat(M)
+    print(" ")
+    print("a=",a,"i=",i,"j=",j)
+    print(" ")
+    print("La ligne ",i," va être remplacee par la ligne ",i,"+ la ligne ",j,"*",a)
+    print("On obtient la matrice :")
+    AfficherMat( ProduitTransvectionG( t, M ) )
+    print("-"*50)
+
+    print(" ---------------- ProduitTransvectionG -------------------")
+    M=[
+        [1,2],
+        [2,3],
+        [3,3],
+        [4,4],
+        [1,1]
+        ]
+
+    a = 2
+    i = 1
+    j = 5
+    t = MatriceTransvection( i, a, j )
+    print("La matrice de depart est :")
+    AfficherMat(M)
+    print(" ")
+    print("a=",a,"i=",i,"j=",j)
+    print(" ")
+    print("La ligne ",i," va être remplacee par la ligne ",i,"+ la ligne ",j,"*",a)
+    print("On obtient la matrice :")
+    AfficherMat( ProduitTransvectionG( t, M ) )
+    print("-"*50)
+
 
     print("")
     print("*"*32, "                             ", "*"*32)

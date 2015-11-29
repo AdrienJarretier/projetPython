@@ -203,7 +203,7 @@ def ProduitTransvectionD( M, T ) :
             MProduct[ i ][ Cj - 1 ] += alpha * MProduct[ i ][ Ci - 1 ]
             MProduct[ i ][ Cj - 1 ]  = round( MProduct[ i ][ Cj - 1 ]  , 4 )
 
-	return MProduct
+    return MProduct
 
 
 

@@ -131,12 +131,31 @@ def testProduitPermutG() :
     A = [
             [ 1, 1, 1 ],
             [ 2, 2, 2 ],
-            [ 3, 3, 3 ],
-            [ 4, 4, 4 ]
+            [ 3, 3, 3 ]
         ]
+    print("matrice non permutee : ")
     AfficherMat( A )
+
+    for i in range( 3, 4 ) :
+        for j in range( len( matricesPerms[ i ] )-1 ) :
+
+            print("")
+            print("#"*50)
+            print( "ProduitPermutG par : " )
+            m = matricesPerms[ i ][ j ]
+
+            AfficherMat( m )
+            print("")
+            AfficherMat( ProduitPermutG( m, A ) )
+
     print("")
-    print( "ProduitPermutG : " )
+    print("#"*50)
+    print( "ProduitPermutG par : " )
+    m = MatId( 3 )
+
+    AfficherMat( m )
+    print("")
+
     AfficherMat( ProduitPermutG( m, A ) )
 
 # # -------------------------------------- ProduitPermutD --------------------------------------
@@ -169,4 +188,4 @@ if __name__ == "__main__" :
     # testMatricePermutation()
     # testPermutationAssociee()
     # testEstPermutation()
-    testMatricePermutationInverse()
+    testProduitPermutG()

@@ -148,3 +148,23 @@ def ResolutionCramer( A,B ):
 
     return ResolutionTriSupCramer( U,Y )
 
+A=[
+    [ 5, 8, 9, 10, 8 ],
+    [ 4, 5, 6, 4, 6 ],
+    [ 7, 8, 10, 5, 9 ],
+    [ 11, 8, 4, 9, 2 ],
+    [ 9, 4, 12, 3, 1 ]
+    ]
+
+B = [ 1, 4, 5, 7, 8 ]
+
+
+
+
+
+
+try :
+    print(ResolutionCramer( A,B ))
+except Exception as mess :
+    AfficherMat(mess.args[1])
+    print(mess.args[0])

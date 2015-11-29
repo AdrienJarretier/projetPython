@@ -1,8 +1,68 @@
 from TestsPermutations import *
 from TestsTransvections import *
 
+from TriangulaireSup import *
+from TriangulaireInf import *
 from TestsDecomposition import *
 from TestsApplications import *
+
+def testTriangulaireSup() :
+	M=[
+	    [1,2,2],
+	    [0,1,2],
+	    [0,0,1]
+	    ]
+	AfficherMat(M)
+	print(TriangulaireSup(M))
+
+	print(" ")
+
+	P=[
+	    [1,2,3,4],
+	    [0,0,2,5],
+	    [4,5,6,9],
+	    [5,8,6,8]
+	    ]
+	AfficherMat(P)
+	print(TriangulaireSup(P))
+	print(" ")
+
+	T=[
+	    [1,2,3,4],
+	    [0,1,2,5],
+	    [0,0,1,9],
+	    ]
+	AfficherMat(T)
+	print(TriangulaireSup(T))
+
+
+
+
+def testTriangulaireInf() :
+	M=[
+	    [1,0,0],
+	    [1,1,0],
+	    [1,1,1]
+	    ]
+
+	AfficherMat(M)
+	print(TriangulaireInf(M))
+
+	P=[
+	    [1,0,4],
+	    [1,1,0],
+	    [1,1,1]
+	    ]
+	AfficherMat(P)
+	print(TriangulaireInf(P))
+
+	T=[
+	    [1,0,0],
+	    [1,1,1],
+	    [1,1,1]
+	    ]
+	AfficherMat(T)
+	print(TriangulaireInf(T))
 
 
 

@@ -1,3 +1,5 @@
+from TestsPermutations import *
+
 from TestsTransvections import *
 from TriangulaireSup import *
 from TriangulaireInf import *

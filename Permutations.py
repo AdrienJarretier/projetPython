@@ -6,10 +6,14 @@ from simplesMatricesFonctions import *
 PermutationAleatoire
 
 Entree :
-	n : un entier
+	n : un entier ; n > 0
 
 Sortie :
 	Une liste qui represente une matrice de permutation aleatoire de taille n*n (n-uplet)
+
+Fonctionnement :
+	genere une liste d'entiers de 1 a n
+	puis melange la liste
 '''
 def PermutationAleatoire( n ) :
 
@@ -38,14 +42,10 @@ def MatricePermutation( nUpletPermutation ) :
 	n = len( nUpletPermutation )
 	matricePerm = MatNulle( n, n )
 
-	# start DEBUG
-	# afficherMat( matricePerm )
-	# print( "" )
-	# end DEBUG
-
 	for col in range( n ) :
 		lig = nUpletPermutation[ col ] - 1
-		# on ajoute un " 1 " a la ligne specifiee par nUpletPermutation, sinon un " 0 "
+
+		# on ajoute un " 1 " a la ligne specifiee par nUpletPermutation
 		matricePerm[ lig ][ col ] = 1
 
 	return matricePerm
@@ -84,7 +84,7 @@ def PermutationAssociee( mPerm ) :
 ## Fonctionnement :
 ##        On cherche :
 ##            - Si la matrice est carree
-##            - S'il n'y a pas de valeurs differente de 0 et de 1 
+##            - S'il n'y a pas de valeurs differente de 0 et de 1
 ##            - Si dans chaque ligne on a qu'un seul 1
 ##            - Si dans chaque colonne on a qu'un seul 1
 ##        Si toutes ces conditions sont respectees alors on a une matrice de permutation

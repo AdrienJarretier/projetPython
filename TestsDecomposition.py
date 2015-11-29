@@ -21,7 +21,7 @@ def testTriangulaireSup():
                         [ 0, 0, 2, 3 ]
                 ]
                 ]
-        
+
         for i in range (len(M)):
                 print("La matrice M est :")
                 AfficherMat(M[i])
@@ -125,6 +125,6 @@ def testDecompositionPLU() :
         print("@"*100)
 
 if __name__ == "__main__":
-        testDecompositionPLU()
         testTriangulaireSup()
         testTriangulaireInf()
+        testDecompositionPLU()

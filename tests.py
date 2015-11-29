@@ -86,7 +86,11 @@ tests = [
 			[ "TriangulaireSup" , testTriangulaireSup ],
 			[ "TriangulaireInf" , testTriangulaireInf ],
 			[ "DecompositionPLU" , testDecompositionPLU ],
-			[ "DeterminantPLU" , testDeterminantPLU ]
+
+			[ "DeterminantPLU" , testDeterminantPLU ],
+			[ "ResolutionTriSupCramer" , TestResolutionTriSupCramer ],
+			[ "ResolutionTriInfCramer" , TestResolutionTriInfCramer ],
+			[ "ResolutionCramer" , TestResolutionCramer ]
 		]
 
 testsTaille = len( tests );
@@ -103,6 +107,8 @@ while continuerTests :
 		if i == 6 :
 			print("")
 		if i == 6 + 6 :
+			print("")
+		if i == 6 + 6 + 3 :
 			print("")
 
 	print("")

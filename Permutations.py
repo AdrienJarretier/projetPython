@@ -12,8 +12,11 @@ Sortie :
 	Une liste qui represente une matrice de permutation aleatoire de taille n*n (n-uplet)
 
 Fonctionnement :
-	genere une liste d'entiers de 1 a n
-	puis melange la liste
+
+        On fait une boucle for pour ajouter les chiffres de 0 a n dans la liste nUpletPermut
+        Puis on melange les chiffres contenus dans la liste nUpletPermut (grace à shuffle)
+        afin d'obtenir une position aleatoire des chiffres dans la liste.
+
 '''
 def PermutationAleatoire( n ) :
 
@@ -36,6 +39,10 @@ Entree :
 
 Sortie :
 	Liste de listes correspondant a la Matrice de permutation associee a nUpletPermutation
+
+Fonctionnement :
+        On cree une matrice nulle de taille n*n (ou n est la taille du nUplet)
+        puis on ajoute des 1 dans la matrice nulle aux positions contenues par le nUplet
 '''
 def MatricePermutation( nUpletPermutation ) :
 
@@ -60,6 +67,12 @@ Entree :
 
 Sortie :
 	liste representant mPerm (n-uplet associe)
+
+Fonctionnement :
+        On cree une liste vide qui va contenir les positions de 1 contenus dans la matrice
+        c'est a dire on va ajouter les numeros des lignes en fonction des colonnes ;
+        nUpletPermutation[ 2 ] va contenir le numero de ligne ou se trouve le 1 dans la
+        colonne 2.
 '''
 def PermutationAssociee( mPerm ) :
 	nUpletPermutation = []
@@ -123,6 +136,8 @@ def EstPermutation( M ) :
 ## Sortie :
 ##	matrice inverse de mPerm
 ##
+## Fonctionnement :
+##      On renvoit la transposee de la matrice de permutation grace a la fonction transposee
 def MatricePermutationInverse( mPerm ):
     return Transposee( mPerm)
 
@@ -142,6 +157,12 @@ Entree :
 
 Sortie :
 	matrice produit de P et M ( P * M )
+
+Fonctionnement :
+        On cree une nouvelle matrice dans laquelle on ajoute les lignes en fonction
+        de leur place dans le nUplet associe a P ;
+        Si le nUplet est (4,2,1,3) on va placer la ligne 4 de la matrice M a la ligne
+        1 de la nouvelle matrice creee.
 '''
 def ProduitPermutG( P, M ) :
 	MProduct = []
@@ -170,6 +191,11 @@ def ProduitPermutG( P, M ) :
 ## Sortie :
 ##	matrice produit de M et P ( M * P )
 ##
+## Fonctionnement :
+##       On cree une nouvelle matrice dans laquelle on ajoute les colonnes en fonction
+##        de leur place dans le nUplet associe a P ;
+##        Si le nUplet est (4,2,1,3) on va placer la colonne 4 de la matrice M a la colonne
+##        1 de la nouvelle matrice creee.
 def ProduitPermutD( M, P ) :
 
     L = PermutationAssociee( P )

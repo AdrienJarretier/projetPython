@@ -62,16 +62,10 @@ def DeterminantPLU( M ) :
 
     detU = 1
 
-    print("DEBUG detP :", detP)
-    print(" ")
-
     for i in range ( len( U ) ):
 
         detU *= U[ i ][ i ]
 
-
-    print("DEBUG detU :", detU)
-    print(" ")
     return detP * detU
 
 
@@ -143,7 +137,11 @@ def ResolutionTriInfCramer( A,B ):
 ##    trouve juste avant).
 ##     Ainsi on obtiendra les solutions de l'equation : A * X = B.
 
+
 def ResolutionCramer( A,B ):
+    if DeterminantPLU( A ) == 0 :
+        raise Exception ("Cette matrice n'est pas un systeme de Cramer")
+
     P, L, U = DecompositionPLU( A )
 
     Y = ResolutionTriInfCramer( L, ProduitPermutG ( MatricePermutationInverse( P ),B ) )

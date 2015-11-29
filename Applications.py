@@ -1,6 +1,5 @@
 from Decomposition import  *
-from TriangulaireInf import*
-from TriangulaireSup import*
+
 
 ##Entree :
 ##    P : une matrice de permutation
@@ -121,6 +120,7 @@ def ResolutionTriInfCramer( A,B ):
         X[ i ] = ( B[ i ] - S ) / A[ i ][ i ]
     return X
 
+## --------------------------------- Resolution Cramer -------------------------- 
 ##ResolutionCramer
 ##
 ##Entree :

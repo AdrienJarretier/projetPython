@@ -1,7 +1,49 @@
 from simplesMatricesFonctions import *
-
 from Permutations import *
 from Transvections import *
+
+# TriangulaireSup
+# Entree :
+#   M : Matrice de taille n*n
+# Sortie :
+#   Booleen qui renvoie si la matrice est triangulaire superieure
+#
+# Fonctionnement :
+#   On verifie que la matrice est bien une matrice carree
+#   Puis on regarde si les coefficients sous la diagonale sont egaux a 0
+
+def TriangulaireSup ( M ):
+    n = len( M )
+    if n != len( M[0] ):
+        return False 
+    for i in range( n ):
+        for j in range ( i ):
+            if M[i][j] != 0:
+                return False
+    return True
+
+
+## TriangulaireInf
+## Entree :
+##    M : matrice de taille n*p
+## Sortie :
+##    Booleen indiquant si la matrice est triangulaire superieure
+##
+## Fonctionnement :
+##      On verifie que la matrice est bien une matrice carree
+##      Puis on regarde si les coefficients au dessus de la diagonale sont egaux a 0
+
+def TriangulaireInf ( M ):
+    n=len(M)
+    if n!=len(M[0]):
+        return False
+    for i in range ( n ):
+        for j in range ( i+1 , n ):
+            if M[i][j] != 0 :
+                return False
+    return True
+
+
 
 '''
 DecompositionPLU
